@@ -14,9 +14,14 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+export EDITOR=nvim
+
 alias c="clear"
-alias l="ls -lsah"
+alias l="ls -lsah --color"
 alias upgrade="sudo pacman -Suy"
 alias hy="c;hyfetch"
+alias n="nvim"
+alias t="tree -a"
+alias y="yazi"
 
 eval "$(starship init zsh)"
