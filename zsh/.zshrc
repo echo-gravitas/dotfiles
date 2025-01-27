@@ -18,9 +18,10 @@ export EDITOR=nvim
 
 alias c="clear"
 alias l="ls -lsah --color"
-alias upgrade="sudo pacman -Suy"
+alias upgrade="yay -Suy"
 alias hy="c;hyfetch"
 alias n="nvim"
+alias v="nvim"
 alias t="tree -a"
 alias y="yazi"
 
