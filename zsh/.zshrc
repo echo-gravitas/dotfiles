@@ -1,18 +1,14 @@
-# Plugins
-source "${HOME}/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
+# Created by Zap installer
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/darkstar/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+plug "zap-zsh/supercharge"
+plug "zsh-users/zsh-autosuggestions"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "zap-zsh/completions"
+plug "zap-zsh/sudo"
+plug "wintermi/zsh-starship"
+plug "zsh-users/zsh-history-substring-search"
+plug "zap-zsh/fzf"
 
 export EDITOR=nvim
 
@@ -25,4 +21,6 @@ alias v="nvim"
 alias t="tree -a"
 alias y="yazi"
 
-eval "$(starship init zsh)"
+# Load and initialise completion system
+autoload -Uz compinit
+compinit
