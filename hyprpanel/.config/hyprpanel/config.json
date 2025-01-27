@@ -66,5 +66,7 @@
   "menus.clock.weather.location": "Los Angeles",
   "menus.dashboard.stats.enabled": true,
   "menus.power.showLabel": true,
-  "menus.power.lowBatteryNotification": false
+  "menus.power.lowBatteryNotification": false,
+  "bar.customModules.storage.labelType": "percentage",
+  "bar.customModules.ram.labelType": "percentage"
 }
