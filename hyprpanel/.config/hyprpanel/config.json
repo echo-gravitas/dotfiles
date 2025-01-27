@@ -68,5 +68,6 @@
   "menus.power.showLabel": true,
   "menus.power.lowBatteryNotification": false,
   "bar.customModules.storage.labelType": "percentage",
-  "bar.customModules.ram.labelType": "percentage"
+  "bar.customModules.ram.labelType": "percentage",
+  "bar.customModules.netstat.labelType": "full"
 }
