@@ -59,7 +59,7 @@
     }
   },
   "bar.network.showWifiInfo": true,
-  "bar.network.truncation": true,
+  "bar.network.truncation": false,
   "bar.battery.label": true,
   "bar.clock.format": "%a %d %b %Y  %H:%M Uhr",
   "bar.clock.showTime": true,
