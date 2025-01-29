@@ -13,7 +13,7 @@ plug "zap-zsh/fzf"
 export EDITOR=nvim
 
 alias c="clear"
-alias l="ls -lsah --color"
+alias l="ls -AGlsh --color"
 alias upgrade="yay -Suy"
 alias hy="c;hyfetch"
 alias n="nvim"
