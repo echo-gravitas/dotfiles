@@ -1,2 +1,12 @@
 [manager]
 ratio =  [2, 2, 4]
+show_hidden = true
+show_symlink = true
+title_format = "{cwd}"
+
+[preview]
+wrap = "no"
+tab_size = 2
+
+[input]
+cursor_blink = true
