@@ -14,7 +14,6 @@ export EDITOR=nvim
 
 alias c="clear"
 alias l="ls -AGlsh --color"
-alias upgrade="yay -Suy"
 alias hy="c;hyfetch"
 alias n="nvim"
 alias v="nvim"
