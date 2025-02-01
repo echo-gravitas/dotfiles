@@ -39,15 +39,14 @@
       "left": [
         "dashboard",
         "workspaces",
-        "windowtitle",
-        "netstat"
+        "windowtitle"
       ],
-      "middle": [
+      "middle": [],
+      "right": [
+        "netstat",
         "ram",
         "cpu",
-        "storage"
-      ],
-      "right": [
+        "storage",
         "network",
         "volume",
         "battery",
