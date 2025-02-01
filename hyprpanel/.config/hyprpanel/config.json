@@ -66,6 +66,7 @@
   "menus.power.showLabel": true,
   "menus.power.lowBatteryNotification": false,
   "bar.customModules.storage.labelType": "percentage",
-  "bar.customModules.ram.labelType": "percentage",
-  "bar.customModules.netstat.labelType": "full"
+  "bar.customModules.ram.labelType": "used",
+  "bar.customModules.netstat.labelType": "full",
+  "menus.dashboard.powermenu.avatar.image": "/home/darkstar/.config/avatar/avatar.jpg"
 }
