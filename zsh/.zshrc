@@ -10,7 +10,7 @@ plug "wintermi/zsh-starship"
 plug "zsh-users/zsh-history-substring-search"
 plug "zap-zsh/fzf"
 
-export EDITOR=nvim
+export EDITOR=code
 
 alias c="clear"
 alias l="ls -AGlsh --color"
@@ -19,6 +19,7 @@ alias n="nvim"
 alias v="nvim"
 alias t="tree -a"
 alias y="yazi"
+alias m="unimatrix --flashers --asynchronous --speed 95"
 
 # Load and initialise completion system
 autoload -Uz compinit
