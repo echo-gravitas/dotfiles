@@ -1,8 +1,7 @@
 configuration {
-  display-drun: "Applications:";
-  display-window: "Windows:";
+  display-drun: "Search:";
   drun-display-format: "{name}";
-  font: "MonoLisa 12";
+  font: "MonoLisa Bold 12";
   modi: "drun";
   show-icons: false;
 }
@@ -10,15 +9,14 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #1E1E2E;
-  bg-alt: #444b6a;
+  bg: #11111b;
+  bg-alt: #45475a;
 
-  fg: #c6a0f6;
-  fg-alt: #cdd6f4;
+  fg: #7dc4e4;
+  fg-alt: #7f849c;
 
-  background-color: @bg;
-  
-  radius: 5;
+  background-color: transparent;
+
   border: 0;
   margin: 0;
   padding: 0;
@@ -26,11 +24,12 @@ configuration {
 }
 
 window {
+  border-radius: 10px;
   width: 30%;
 }
 
 element {
-  padding: 10;
+  padding: 10px;
   text-color: @fg-alt;
 }
 
@@ -59,8 +58,7 @@ inputbar {
 }
 
 listview {
-  padding: 8 12;
-  background-color: @bg;
+  padding: 10px;
   columns: 1;
   lines: 8;
 }
