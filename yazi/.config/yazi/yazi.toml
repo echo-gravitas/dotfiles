@@ -4,7 +4,6 @@ show_hidden     = true
 show_symlink    = true
 title_format    = "{cwd}"
 sort_by         = "alphabetical"
-sort_dir_first  = true
 linemode        = "size"
 
 [preview]

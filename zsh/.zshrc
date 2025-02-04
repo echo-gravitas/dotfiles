@@ -11,6 +11,7 @@ plug "zsh-users/zsh-history-substring-search"
 plug "zap-zsh/fzf"
 
 export EDITOR=nvim
+export VISUAL=nvim
 
 alias c="clear"
 alias l="ls -AGlsh --color"
