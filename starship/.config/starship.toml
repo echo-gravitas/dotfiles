@@ -57,6 +57,7 @@ truncation_symbol = "…/"
 "Documents" = "󰲂 "
 "Downloads" = "󰉍 "
 "Music" = "󱍙 "
+"Videos" = "󰉏 "
 "Pictures" = "󰉏 "
 "Projects" = "󱃪 "
 # Keep in mind that the order matters. For example:

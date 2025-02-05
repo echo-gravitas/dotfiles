@@ -22,6 +22,7 @@ alias t="tree -a"
 alias y="yazi"
 alias m="unimatrix --flashers --asynchronous --speed 97"
 alias ctl="systemctl"
+alias g="git"
 
 # Load and initialise completion system
 autoload -Uz compinit
