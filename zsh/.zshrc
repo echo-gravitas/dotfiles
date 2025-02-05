@@ -20,7 +20,7 @@ alias n="nvim"
 alias v="nvim"
 alias t="tree -a"
 alias y="yazi"
-alias m="unimatrix --flashers --asynchronous --speed 95"
+alias m="unimatrix --flashers --asynchronous --speed 97"
 alias ctl="systemctl"
 
 # Load and initialise completion system

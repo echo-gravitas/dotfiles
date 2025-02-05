@@ -68,5 +68,7 @@
   "bar.customModules.storage.labelType": "percentage",
   "bar.customModules.ram.labelType": "used",
   "bar.customModules.netstat.labelType": "full",
-  "menus.dashboard.powermenu.avatar.image": "/home/darkstar/.config/avatar/avatar.jpg"
+  "menus.dashboard.powermenu.avatar.image": "/home/darkstar/.config/avatar/avatar.jpg",
+  "bar.autoHide": "never",
+  "theme.bar.location": "top"
 }
