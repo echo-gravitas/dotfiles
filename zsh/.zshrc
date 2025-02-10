@@ -13,6 +13,7 @@ plug "zap-zsh/fzf"
 export EDITOR=nvim
 export VISUAL=nvim
 
+# Misc aliases
 alias c="clear"
 alias l="ls -AGlsh --color"
 alias hy="c;hyfetch"
@@ -22,7 +23,19 @@ alias t="tree -a"
 alias y="yazi"
 alias m="unimatrix --flashers --asynchronous --speed 97"
 alias ctl="systemctl"
-alias g="git"
+
+# git aliases
+alias gs="git status"
+alias gd="git diff"
+alias ga="git add"
+alias gp="git push"
+alias gl="git log"
+alias gsw="git switch"
+alias gpt="git push --tags"
+
+function gc() {
+  git commit -m "$1"
+}
 
 # Load and initialise completion system
 autoload -Uz compinit
