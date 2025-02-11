@@ -25,6 +25,7 @@ alias m="unimatrix --flashers --asynchronous --speed 97"
 alias ctl="systemctl"
 
 # git aliases
+alias g="git"
 alias gs="git status"
 alias gd="git diff"
 alias ga="git add"
@@ -32,6 +33,7 @@ alias gp="git push"
 alias gl="git log"
 alias gsw="git switch"
 alias gpt="git push --tags"
+alias gpa="git push --all"
 
 function gc() {
   git commit -m "$1"
