@@ -16,7 +16,7 @@ export VISUAL=nvim
 # Misc aliases
 alias c="clear"
 alias l="ls -AGlsh --color"
-alias hy="c;hyfetch"
+alias ff="c;fastfetch"
 alias n="nvim"
 alias v="nvim"
 alias t="tree -a"
