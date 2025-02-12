@@ -14,7 +14,8 @@
   },
   "display": {
     "color": {
-      "keys": "cyan"
+      "keys": "cyan",
+      "output": "bright_"
     }
   },
   "modules": [
