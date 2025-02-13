@@ -22,7 +22,7 @@ alias v="nvim"
 alias t="tree -a"
 alias y="yazi"
 alias m="unimatrix --flashers --asynchronous --speed 97"
-alias ctl="systemctl"
+alias ctl="sudo systemctl"
 
 # git aliases
 alias g="git"
