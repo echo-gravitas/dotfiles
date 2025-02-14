@@ -12,3 +12,4 @@ mouse-hide-while-typing = true
 background-opacity = 1
 background-blur = 0
 copy-on-select = true
+auto-update-channel = stable
