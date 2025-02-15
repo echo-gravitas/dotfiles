@@ -1,0 +1,28 @@
+repositories:
+  - path: ssh://darkstar@backup-server/mnt/backup/darkstar-arch
+    label: BackupServer
+
+source_directories:
+  - /home/darkstar
+  - /etc
+  - /root
+  - /usr/share/fonts
+  - /var/log
+
+exclude_patterns:
+  - "**/node_modules"
+  - "**/.cache"
+
+keep_daily: 7
+keep_weekly: 4
+keep_monthly: 6
+
+checks:
+  - name: repository
+  - name: archives
+  - name: data
+    frequency: 2 weeks
+
+exclude_caches: true
+
+encryption_passcommand: systemd-creds decrypt /etc/systemd/credentials/borgmatic
