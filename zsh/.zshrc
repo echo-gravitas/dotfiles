@@ -10,8 +10,10 @@ plug "wintermi/zsh-starship"
 plug "zsh-users/zsh-history-substring-search"
 plug "zap-zsh/fzf"
 
+# ENV Variables
 export EDITOR=nvim
 export VISUAL=nvim
+export CREDENTIALS_DIRECTORY=/etc/systemd/credentials
 
 # Misc aliases
 alias c="clear"
