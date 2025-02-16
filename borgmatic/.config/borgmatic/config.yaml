@@ -26,3 +26,8 @@ checks:
 exclude_caches: true
 
 encryption_passcommand: systemd-creds decrypt /etc/systemd/credentials/borgmatic
+
+healthchecks:
+  ping_url: https://hc-ping.com/d3029bd3-7f3f-41ef-895e-b595f6a46a18
+  send_logs: false
+  states: [finish]
