@@ -1,5 +1,5 @@
 repositories:
-  - path: ssh://darkstar@backup-server/mnt/backup/darkstar-arch
+  - path: ssh://darkstar-backup@backup-server/mnt/backup/darkstar-arch
     label: BackupServer
 
 source_directories:

@@ -17,7 +17,7 @@ export CREDENTIALS_DIRECTORY=/etc/systemd/credentials
 
 # Misc aliases
 alias c="clear"
-alias l="ls -AGlsh --color"
+alias l="ls -Alsh --color"
 alias ff="c;fastfetch"
 alias n="nvim"
 alias v="nvim"
