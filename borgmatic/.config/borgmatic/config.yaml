@@ -5,6 +5,7 @@ repositories:
 source_directories:
   - /home/darkstar
   - /etc
+  - /boot
   - /root
   - /usr/share/fonts
   - /var/log
