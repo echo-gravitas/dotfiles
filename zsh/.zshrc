@@ -9,6 +9,9 @@ plug "zap-zsh/sudo"
 plug "wintermi/zsh-starship"
 plug "zsh-users/zsh-history-substring-search"
 plug "zap-zsh/fzf"
+plug "chivalryq/git-alias"
+plug "MichaelAquilina/zsh-you-should-use"
+plug "zap-zsh/web-search"
 
 # ENV Variables
 export EDITOR=nvim
@@ -21,29 +24,16 @@ alias l="ls -Alsh --color"
 alias ff="c;fastfetch"
 alias n="nvim"
 alias v="nvim"
+alias nano="nvim"
+alias vi="nvim"
+alias vim="nvim"
 alias t="tree -a"
 alias y="yazi"
 alias m="unimatrix --flashers --asynchronous --speed 97"
-alias ctl="sudo systemctl"
-
-# git aliases
-alias g="git"
-alias gs="git status"
-alias gd="git diff"
-alias ga="git add"
-alias gaa="git add ."
-alias gp="git push"
-alias gl="git log"
-alias gr="git restore"
-alias grs="git restore  --staged"
-alias gres="git reset"
-alias gsw="git switch"
-alias gpt="git push --tags"
-alias gpa="git push --all"
-
-function gc() {
-  git commit -m "$1"
-}
+alias ctl="systemctl"
+alias sctl="sudo systemctl"
+alias jrnl="journalctl"
+alias sjrnl="sudo journalctl"
 
 # Load and initialise completion system
 autoload -Uz compinit
