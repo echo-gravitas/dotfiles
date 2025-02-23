@@ -11,10 +11,9 @@ plug "zsh-users/zsh-history-substring-search"
 plug "zap-zsh/fzf"
 plug "chivalryq/git-alias"
 plug "MichaelAquilina/zsh-you-should-use"
-plug "zap-zsh/web-search"
 
 # ENV Variables
-export EDITOR=nvim
+export EDITOR=/usr/bin/nvim
 export VISUAL=nvim
 export CREDENTIALS_DIRECTORY=/etc/systemd/credentials
 
