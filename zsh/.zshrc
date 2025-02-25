@@ -13,9 +13,11 @@ plug "chivalryq/git-alias"
 plug "MichaelAquilina/zsh-you-should-use"
 
 # ENV Variables
-export EDITOR=/usr/bin/nvim
-export VISUAL=nvim
-export CREDENTIALS_DIRECTORY=/etc/systemd/credentials
+export EDITOR="/usr/bin/nvim"
+export VISUAL="nvim"
+export CREDENTIALS_DIRECTORY="/etc/systemd/credentials"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
 
 # Misc aliases
 alias c="clear"

@@ -17,7 +17,9 @@ return {
           "lua_ls",
           "intelephense",
           "biome",
-          "pyright"
+          "pyright",
+          "taplo",
+          "yamlls"
         }
       })
 
@@ -26,19 +28,30 @@ return {
       local root_dir = util.root_pattern(
         "package.json",
         "tsconfig.json",
-        ".git"
+        ".git",
+        ".lsproot"
       )
 
       lspconfig.lua_ls.setup({
         root_dir = root_dir
       })
 
+      lspconfig.taplo.setup({
+        root_dir = root_dir
+      })
+
+      lspconfig.yamlls.setup({
+        root_dir = root_dir
+      })
+
       lspconfig.pyright.setup({
         root_dir = root_dir
       })
+
       lspconfig.intelephense.setup({
         root_dir = root_dir
       })
+
       lspconfig.biome.setup({
         root_dir = root_dir
       })

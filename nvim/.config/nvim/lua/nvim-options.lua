@@ -9,7 +9,7 @@ vim.opt.showcmd = true
 vim.opt.laststatus = 2
 vim.opt.cursorline = true
 vim.opt.autoread = true
-vim.wo.relativenumber = false
+vim.wo.relativenumber = true
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
