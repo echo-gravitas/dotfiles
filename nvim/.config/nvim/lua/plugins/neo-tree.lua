@@ -27,5 +27,6 @@ return {
       },
     }
     vim.keymap.set('n', '\\', '<CMD>Neotree toggle<CR>', {})
+    vim.keymap.set('n', '·', '<CMD>Neotree reveal<CR>', {})
   end,
 }

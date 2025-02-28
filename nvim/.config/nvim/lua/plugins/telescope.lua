@@ -11,12 +11,17 @@ return {
         return vim.fn.executable 'make' == 1
       end,
     },
-    { 'nvim-telescope/telescope-ui-select.nvim' },
-
-    { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+    {
+      'nvim-telescope/telescope-ui-select.nvim',
+    },
+    {
+      'nvim-tree/nvim-web-devicons',
+      enabled = vim.g.have_nerd_font,
+    },
   },
   config = function()
     require('telescope').setup {
+
       defaults = {
         vimgrep_arguments = {
           'rg',
@@ -29,11 +34,13 @@ return {
           '--hidden',
         },
       },
+
       pickers = {
         find_files = {
           hidden = true,
         },
       },
+
       extensions = {
         fzf = {},
         ['ui-select'] = {
@@ -41,6 +48,7 @@ return {
         },
       },
     }
+
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
 
