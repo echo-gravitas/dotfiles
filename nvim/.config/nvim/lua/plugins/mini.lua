@@ -8,6 +8,7 @@ return {
     require('mini.cursorword').setup()
     require('mini.hipatterns').setup()
     require('mini.map').setup()
+    require('mini.pairs').setup()
     require('mini.starter').setup()
   end,
 }

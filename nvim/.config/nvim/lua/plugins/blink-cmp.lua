@@ -3,7 +3,12 @@ return {
   dependencies = 'rafamadriz/friendly-snippets',
   version = '*',
   opts = {
-    keymap = { preset = 'default' },
+    keymap = {
+      preset = 'default',
+
+      ['<Tab>'] = { 'accept', 'fallback' }
+
+    },
     appearance = {
       use_nvim_cmp_as_default = true,
       nerd_font_variant = 'mono'

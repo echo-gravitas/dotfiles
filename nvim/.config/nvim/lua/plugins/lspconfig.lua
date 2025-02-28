@@ -7,9 +7,6 @@ return {
     opts = {},
   },
   {
-    'saghen/blink.cmp',
-  },
-  {
     'williamboman/mason-lspconfig.nvim',
     dependencies = {
       'williamboman/mason.nvim',
