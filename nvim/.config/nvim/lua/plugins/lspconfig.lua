@@ -20,18 +20,43 @@ return {
 
       return {
         ensure_installed = {
-          'lua_ls',
-          'intelephense',
-          'biome',
-          'pyright',
-          'taplo',
-          'yamlls',
+          'lua_ls',       -- Lua
+          'intelephense', -- PHP
+          'biome',        -- JavaScript/TypeScript Formatter/Linter
+          'pyright',      -- Python
+          'taplo',        -- TOML
+          'yamlls',       -- YAML
+          'ts_ls',        -- TypeScript & JavaScript
+          'eslint',       -- Linting für JavaScript/TypeScript
+          'html',         -- HTML
+          'cssls',        -- CSS
+          'jsonls',       -- JSON
         },
         handlers = {
           function(server_name)
             lspconfig[server_name].setup({
               capabilities = capabilities,
               root_dir = util.root_pattern('package.json', 'tsconfig.json', '.git', '.lsproot'),
+            })
+          end,
+          ["ts_ls"] = function()
+            lspconfig.ts_ls.setup({
+              capabilities = capabilities,
+              root_dir = util.root_pattern("package.json", "tsconfig.json", ".git"),
+              settings = {
+                completions = {
+                  completeFunctionCalls = true, -- Fügt automatisch `()` nach Funktionsnamen hinzu
+                },
+              },
+            })
+          end,
+          ["eslint"] = function()
+            lspconfig.eslint.setup({
+              capabilities = capabilities,
+              root_dir = util.root_pattern(".eslintrc.js", ".eslintrc.json", "package.json"),
+              settings = {
+                format = true,
+              },
             })
           end,
         },
