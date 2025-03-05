@@ -16,15 +16,15 @@ return {
     },
     indent = {
       char = "┃",
-      highlight = {
-        'CatppuccinMauve',
-        'CatppuccinRed',
-        'CatppuccinGreen',
-        'CatppuccinLavender',
-        'CatppuccinFlamingo',
-        'CatppuccinSapphire',
-        'CatppuccinPeach',
-      },
+      -- highlight = {
+      --   'CatppuccinMauve',
+      --   'CatppuccinRed',
+      --   'CatppuccinGreen',
+      --   'CatppuccinLavender',
+      --   'CatppuccinFlamingo',
+      --   'CatppuccinSapphire',
+      --   'CatppuccinPeach',
+      -- },
     },
   },
 }
