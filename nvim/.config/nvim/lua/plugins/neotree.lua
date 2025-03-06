@@ -8,7 +8,7 @@ return {
   config = function()
     require('neo-tree').setup {
       window = {
-        position = 'left',
+        position = 'float',
       },
       filesystem = {
         filtered_items = {
@@ -27,6 +27,7 @@ return {
       },
     }
     vim.keymap.set('n', '\\', '<CMD>Neotree toggle<CR>', {})
+    vim.keymap.set('n', '<leader><Tab>', '<CMD>Neotree toggle<CR>', {})
     vim.keymap.set('n', '·', '<CMD>Neotree reveal<CR>', {})
   end,
 }
