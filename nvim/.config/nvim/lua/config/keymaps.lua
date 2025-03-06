@@ -33,7 +33,7 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-vim.keymap.set('n', '<leader>,', '<CMD>split|term<CR>', { desc = 'Open a terminal' })
+
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
@@ -42,10 +42,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.api.nvim_create_autocmd('TermOpen', {
-  group = vim.api.nvim_create_augroup('custom-term-open', { clear = true }),
-  callback = function()
-    vim.opt.number = false
-    vim.opt.relativenumber = false
-  end
-})
+vim.keymap.set('n', '<leader>,', function()
+  vim.cmd.vnew()
+  vim.cmd.term()
+  vim.cmd.wincmd('J')
+  vim.api.nvim_win_set_height(0, 10)
+  vim.opt.relativenumber = false
+  vim.opt.number = false
+end, { desc = 'Open a termal below' })
