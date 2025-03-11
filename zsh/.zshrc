@@ -18,6 +18,9 @@ export VISUAL="nvim"
 export CREDENTIALS_DIRECTORY="/etc/systemd/credentials"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+export SDL_VIDEO_X11_DGAMOUSE=0
+export XDG_SESSION_TYPE=wayland
+
 
 # Misc aliases
 alias c="clear"
@@ -35,6 +38,7 @@ alias ctl="systemctl"
 alias sctl="sudo systemctl"
 alias jrnl="journalctl"
 alias sjrnl="sudo journalctl"
+alias mail="aerc"
 
 # Load and initialise completion system
 autoload -Uz compinit

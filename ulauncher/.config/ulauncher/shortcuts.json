@@ -1,0 +1,22 @@
+{
+    "5a63e9ab-7a6b-447d-87be-5f3decb3ea25": {
+        "id": "5a63e9ab-7a6b-447d-87be-5f3decb3ea25",
+        "name": "Google Search",
+        "keyword": "g",
+        "cmd": "https://google.ch/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1741636655.5973346
+    },
+    "6e8b75f2-59fc-4f62-b34e-cacdb56ff00d": {
+        "id": "6e8b75f2-59fc-4f62-b34e-cacdb56ff00d",
+        "name": "Wikipedia",
+        "keyword": "wiki",
+        "cmd": "https://de.wikipedia.org/wiki/%s",
+        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1741636655.5973988
+    }
+}
