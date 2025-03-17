@@ -3,8 +3,6 @@ return {
     'nvim-telescope/telescope.nvim',
     opts = {
       defaults = {
-        border = true,
-        promt_prefix = '🔍 ',
         vimgrep_arguments = {
           'rg',
           '--color=never',
@@ -40,8 +38,31 @@ return {
   },
   {
     'neovim/nvim-lspconfig',
-    config = function ()
-      return require ('configs.lspconfig')
+    opts = function ()
+      local lspconfig = require ('lspconfig')
+      local nvlsp = require ('nvchad.configs.lspconfig')
+
+      return {
+        servers = {
+          html = {},
+          cssls = {},
+          pyright = {},
+          biome = {},
+          ts_ls = {},
+        },
+        setup = function (servers)
+          for server, config in pairs (servers) do
+            lspconfig[server].setup (vim.tbl_deep_extend ('force', {
+              on_attach = nvlsp.on_attach,
+              on_init = nvlsp.on_init,
+              capabilities = nvlsp.capabilities,
+            }, config))
+          end
+        end,
+      }
+    end,
+    config = function (_, opts)
+      opts.setup (opts.servers)
     end,
   },
   {
