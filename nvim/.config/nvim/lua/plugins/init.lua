@@ -8,7 +8,7 @@ return {
       'MunifTanjim/nui.nvim',
     },
     opts = {
-      close_if_last_window = true,
+      close_if_last_window = false,
       popup_border_style = 'solid',
       enable_git_status = true,
       enable_modified_markers = true,
@@ -16,7 +16,8 @@ return {
       sort_case_insensitive = true,
       window = {
         position = 'left',
-        auto_expand_width = true,
+        width = 30,
+        auto_expand_width = false,
       },
       filesystem = {
         follow_current_file = {
