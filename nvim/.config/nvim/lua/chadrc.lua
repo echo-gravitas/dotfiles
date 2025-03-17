@@ -2,6 +2,7 @@ local M = {}
 
 M.base46 = {
   theme = 'catppuccin',
+  theme_toggle = { 'catppuccin', 'one_light' },
 }
 
 M.nvdash = {
@@ -18,8 +19,9 @@ M.nvdash = {
     '⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠉⢉⣽⣿⠿⣿⡿⢻⣯⡍⢁⠄⠀⠀⠀⣸⣿⣿⣿⣿⣿',
     '⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠐⡀⢉⠉⠀⠠⠀⢉⣉⠀⡜⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿',
     '⣿⣿⣿⣿⣿⣿⠿⠁⠀⠀⠀⠘⣤⣭⣟⠛⠛⣉⣁⡜⠀⠀⠀⠀⠀⠛⠿⣿⣿⣿⣿',
-    '⡿⠟⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠈⢻⣿⡀⠀⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠿',
-    '                               ',
+    '⡿⠟⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠈⢻⣿⡀⠀⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⣿',
+    '                              ⠘',
+    '            darkstar           ',
     '                               ',
   },
 }
@@ -36,6 +38,11 @@ M.ui = {
 
   tabufline = {
     lazyload = false,
+  },
+
+  cmp = {
+    lspkind_text = true,
+    style = 'flat_light',
   },
 }
 
