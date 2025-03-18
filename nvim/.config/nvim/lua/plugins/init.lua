@@ -95,6 +95,12 @@ return {
         typescript = { 'biome' },
         typescriptreact = { 'biome' },
         json = { 'biome' },
+        python = { 'pyright' },
+        toml = { 'taplo' },
+        markdown = { 'marksman' },
+        yaml = { 'yamlls' },
+        sh = { 'beautysh' },
+        zsh = { 'beautysh' },
       },
       format_on_save = {
         lsp_fallback = true,
@@ -109,11 +115,18 @@ return {
 
       return {
         servers = {
+          bashls = {},
           html = {},
           cssls = {},
           pyright = {},
           biome = {},
           ts_ls = {},
+          eslint = {},
+          intelephense = {},
+          taplo = {},
+          marksman = {},
+          yamlls = {},
+          lua_ls = {},
         },
         setup = function (servers)
           for server, config in pairs (servers) do
@@ -159,6 +172,8 @@ return {
         'lua',
         'nginx',
         'php',
+        'markdown_inline',
+        'markdown',
         'powershell',
         'python',
         'regex',
