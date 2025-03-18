@@ -1,5 +1,6 @@
 return {
   {
+    lazy = false,
     'nvim-neo-tree/neo-tree.nvim',
     branch = 'v3.x',
     dependencies = {
@@ -47,10 +48,12 @@ return {
     },
   },
   {
+    lazy = false,
     'nvim-tree/nvim-tree.lua',
     enabled = false,
   },
   {
+    lazy = false,
     'folke/which-key.nvim',
     event = 'VimEnter',
     opts = {
@@ -58,6 +61,7 @@ return {
     },
   },
   {
+    lazy = false,
     'folke/todo-comments.nvim',
     event = 'VimEnter',
     opts = {
@@ -65,6 +69,7 @@ return {
     },
   },
   {
+    lazy = false,
     'nvim-telescope/telescope.nvim',
     opts = {
       defaults = {
@@ -83,6 +88,7 @@ return {
     },
   },
   {
+    lazy = false,
     'stevearc/conform.nvim',
     event = 'BufWritePre',
     opts = {
@@ -108,6 +114,7 @@ return {
     },
   },
   {
+    lazy = false,
     'neovim/nvim-lspconfig',
     opts = function ()
       local lspconfig = require ('lspconfig')
@@ -144,6 +151,7 @@ return {
     end,
   },
   {
+    lazy = false,
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
@@ -194,6 +202,7 @@ return {
     },
   },
   {
+    lazy = false,
     'lewis6991/gitsigns.nvim',
     opts = {
       signs = {
@@ -247,6 +256,7 @@ return {
     },
   },
   {
+    lazy = false,
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
     init = function ()
@@ -277,9 +287,9 @@ return {
     },
   },
   {
+    lazy = false,
     'echasnovski/mini.nvim',
     version = '*',
-    lazy = false,
     config = function ()
       require ('mini.cursorword').setup ()
       require ('mini.ai').setup ()
