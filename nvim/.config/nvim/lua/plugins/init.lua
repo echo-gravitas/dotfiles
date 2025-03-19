@@ -30,6 +30,10 @@ return {
           hide_gitignored = false,
           hide_dotfiles = false,
           hide_by_name = {
+            '.cache',
+            'node_modules',
+            '.local',
+            '.git',
             -- ".github",
             -- ".gitignore",
             -- "package-lock.json",

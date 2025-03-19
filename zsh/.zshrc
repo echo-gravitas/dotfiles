@@ -23,6 +23,7 @@ export XDG_SESSION_TYPE=wayland
 
 
 # Misc aliases
+alias spider="telnet dx.da0bcc.de 7300"
 alias c="clear"
 alias l="ls -Alsh --color"
 alias ff="c;fastfetch"
