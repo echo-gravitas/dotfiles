@@ -9,6 +9,7 @@ plug "zap-zsh/sudo"
 plug "wintermi/zsh-starship"
 plug "zsh-users/zsh-history-substring-search"
 plug "zap-zsh/fzf"
+plug "Aloxaf/fzf-tab"
 plug "chivalryq/git-alias"
 plug "MichaelAquilina/zsh-you-should-use"
 
