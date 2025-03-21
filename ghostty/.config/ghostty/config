@@ -11,5 +11,5 @@ font-synthetic-style = false
 mouse-hide-while-typing = true
 background-opacity = 1
 background-blur = 0
-copy-on-select = true
+copy-on-select = false 
 auto-update-channel = stable
