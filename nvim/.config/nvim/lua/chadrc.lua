@@ -6,7 +6,7 @@ M.base46 = {
 }
 
 M.nvdash = {
-  load_on_startup = true,
+  load_on_startup = false,
   header = {
     '⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠁⠀⠀⠈⠉⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿',
     '⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿',
@@ -21,7 +21,7 @@ M.nvdash = {
     '⣿⣿⣿⣿⣿⣿⠿⠁⠀⠀⠀⠘⣤⣭⣟⠛⠛⣉⣁⡜⠀⠀⠀⠀⠀⠛⠿⣿⣿⣿⣿',
     '⡿⠟⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠈⢻⣿⡀⠀⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⣿',
     '                              ⠘',
-    '            darkstar           ',
+    '           Dark Star           ',
     '                               ',
   },
 }
@@ -37,7 +37,7 @@ M.ui = {
   },
 
   tabufline = {
-    lazyload = false,
+    enabled = false,
   },
 
   cmp = {

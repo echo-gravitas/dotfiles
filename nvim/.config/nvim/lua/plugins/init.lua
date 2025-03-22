@@ -1,6 +1,55 @@
 return {
   {
-    lazy = false,
+    'yetone/avante.nvim',
+    event = 'VeryLazy',
+    version = false,
+    opts = {
+      provider = 'openai',
+      openai = {
+        endpoint = 'https://api.openai.com/v1',
+        model = 'gpt-4o',
+        timeout = 30000,
+        -- temperature = 0,
+        max_completion_tokens = 8192,
+        --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+      },
+    },
+    build = 'make',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+      'stevearc/dressing.nvim',
+      'nvim-lua/plenary.nvim',
+      'MunifTanjim/nui.nvim',
+      'echasnovski/mini.pick',
+      'nvim-telescope/telescope.nvim',
+      'hrsh7th/nvim-cmp',
+      'ibhagwan/fzf-lua',
+      'nvim-tree/nvim-web-devicons',
+      'zbirenbaum/copilot.lua',
+      {
+        'HakonHarnes/img-clip.nvim',
+        event = 'VeryLazy',
+        opts = {
+          default = {
+            embed_image_as_base64 = false,
+            prompt_for_file_name = false,
+            drag_and_drop = {
+              insert_mode = true,
+            },
+            use_absolute_path = true,
+          },
+        },
+      },
+      {
+        'MeanderingProgrammer/render-markdown.nvim',
+        opts = {
+          file_types = { 'markdown', 'Avante' },
+        },
+        ft = { 'markdown', 'Avante' },
+      },
+    },
+  },
+  {
     'nvim-neo-tree/neo-tree.nvim',
     branch = 'v3.x',
     dependencies = {
@@ -30,6 +79,10 @@ return {
           hide_gitignored = false,
           hide_dotfiles = false,
           hide_by_name = {
+            '.cache',
+            'node_modules',
+            '.local',
+            '.git',
             -- ".github",
             -- ".gitignore",
             -- "package-lock.json",
@@ -48,12 +101,6 @@ return {
     },
   },
   {
-    lazy = false,
-    'nvim-tree/nvim-tree.lua',
-    enabled = false,
-  },
-  {
-    lazy = false,
     'folke/which-key.nvim',
     event = 'VimEnter',
     opts = {
@@ -61,7 +108,6 @@ return {
     },
   },
   {
-    lazy = false,
     'folke/todo-comments.nvim',
     event = 'VimEnter',
     opts = {
@@ -69,7 +115,6 @@ return {
     },
   },
   {
-    lazy = false,
     'nvim-telescope/telescope.nvim',
     opts = {
       defaults = {
@@ -88,7 +133,6 @@ return {
     },
   },
   {
-    lazy = false,
     'stevearc/conform.nvim',
     event = 'BufWritePre',
     opts = {
@@ -101,7 +145,7 @@ return {
         typescript = { 'biome' },
         typescriptreact = { 'biome' },
         json = { 'biome' },
-        python = { 'pyright' },
+        python = { 'autopep8' },
         toml = { 'taplo' },
         markdown = { 'marksman' },
         yaml = { 'yamlls' },
@@ -114,7 +158,6 @@ return {
     },
   },
   {
-    lazy = false,
     'neovim/nvim-lspconfig',
     opts = function ()
       local lspconfig = require ('lspconfig')
@@ -151,7 +194,6 @@ return {
     end,
   },
   {
-    lazy = false,
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
@@ -163,28 +205,45 @@ return {
         enabled = true,
       },
       ensure_installed = {
+        'arduino',
+        'astro',
         'bash',
+        'c',
+        'c_sharp',
+        'cmake',
         'css',
         'csv',
+        'diff',
+        'dockerfile',
         'git_config',
+        'git_rebase',
         'gitcommit',
         'gitignore',
+        'go',
         'gpg',
+        'graphql',
         'html',
         'http',
         'hyprlang',
         'javascript',
+        'jsdoc',
         'json',
         'jsonc',
         'liquid',
         'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
         'nginx',
         'php',
-        'markdown_inline',
-        'markdown',
+        'phpdoc',
         'powershell',
+        'printf',
+        'pug',
         'python',
         'regex',
+        'robot',
+        'robots',
         'scss',
         'sql',
         'ssh_config',
@@ -192,17 +251,16 @@ return {
         'toml',
         'tsv',
         'tsx',
-        'tsx',
         'typescript',
         'vim',
         'vimdoc',
         'vue',
+        'xml',
         'yaml',
       },
     },
   },
   {
-    lazy = false,
     'lewis6991/gitsigns.nvim',
     opts = {
       signs = {
@@ -256,7 +314,6 @@ return {
     },
   },
   {
-    lazy = false,
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
     init = function ()
@@ -287,7 +344,6 @@ return {
     },
   },
   {
-    lazy = false,
     'echasnovski/mini.nvim',
     version = '*',
     config = function ()

@@ -1,6 +1,8 @@
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
+[ -f "$HOME/.zsh_secrets" ] && source "$HOME/.zsh_secrets"
+
 plug "zap-zsh/supercharge"
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
@@ -9,6 +11,7 @@ plug "zap-zsh/sudo"
 plug "wintermi/zsh-starship"
 plug "zsh-users/zsh-history-substring-search"
 plug "zap-zsh/fzf"
+plug "Aloxaf/fzf-tab"
 plug "chivalryq/git-alias"
 plug "MichaelAquilina/zsh-you-should-use"
 
@@ -23,6 +26,7 @@ export XDG_SESSION_TYPE=wayland
 
 
 # Misc aliases
+alias spider="telnet dx.da0bcc.de 7300"
 alias c="clear"
 alias l="ls -Alsh --color"
 alias ff="c;fastfetch"
