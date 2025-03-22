@@ -37,7 +37,7 @@ M.ui = {
   },
 
   tabufline = {
-    lazyload = false,
+    enabled = false,
   },
 
   cmp = {
