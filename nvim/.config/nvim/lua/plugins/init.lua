@@ -147,8 +147,8 @@ return {
         json = { 'biome' },
         python = { 'autopep8' },
         toml = { 'taplo' },
-        markdown = { 'marksman' },
-        yaml = { 'yamlls' },
+        markdown = { 'mdformat' },
+        yaml = { 'yamlfix' },
         sh = { 'beautysh' },
         zsh = { 'beautysh' },
       },
@@ -174,9 +174,8 @@ return {
           eslint = {},
           intelephense = {},
           taplo = {},
-          marksman = {},
-          yamlls = {},
           lua_ls = {},
+          yamlls = {},
         },
         setup = function (servers)
           for server, config in pairs (servers) do
