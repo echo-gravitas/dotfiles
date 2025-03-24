@@ -13,6 +13,7 @@ source_directories:
 exclude_patterns:
   - "**/node_modules"
   - "**/.cache"
+  - /home/darkstar/Private Data
 
 keep_daily: 7
 keep_weekly: 4
