@@ -1,6 +1,6 @@
 return {
   defaults = {
-    lazy = false,
+    lazy = true,
   },
   install = {
     colorscheme = {
