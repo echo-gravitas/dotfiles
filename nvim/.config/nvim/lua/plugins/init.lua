@@ -1,5 +1,6 @@
 return {
   {
+    lazy = true,
     'yetone/avante.nvim',
     event = 'VeryLazy',
     version = false,
@@ -14,6 +15,7 @@ return {
         --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
       },
     },
+    lazy = true,
     build = 'make',
     dependencies = {
       'nvim-treesitter/nvim-treesitter',
@@ -40,16 +42,27 @@ return {
           },
         },
       },
-      {
-        'MeanderingProgrammer/render-markdown.nvim',
-        opts = {
-          file_types = { 'markdown', 'Avante' },
-        },
-        ft = { 'markdown', 'Avante' },
-      },
     },
   },
   {
+    lazy = true,
+    'MeanderingProgrammer/render-markdown.nvim',
+    opts = {
+      file_types = {
+        'markdown',
+        'Avante',
+      },
+      heading = {
+        position = 'inline',
+      },
+    },
+    ft = {
+      'markdown',
+      'Avante',
+    },
+  },
+  {
+    lazy = false,
     'nvim-neo-tree/neo-tree.nvim',
     branch = 'v3.x',
     dependencies = {
@@ -101,6 +114,7 @@ return {
     },
   },
   {
+    lazy = true,
     'folke/which-key.nvim',
     event = 'VimEnter',
     opts = {
@@ -108,6 +122,7 @@ return {
     },
   },
   {
+    lazy = true,
     'folke/todo-comments.nvim',
     event = 'VimEnter',
     opts = {
@@ -115,6 +130,7 @@ return {
     },
   },
   {
+    lazy = true,
     'nvim-telescope/telescope.nvim',
     opts = {
       defaults = {
@@ -133,6 +149,7 @@ return {
     },
   },
   {
+    lazy = true,
     'stevearc/conform.nvim',
     event = 'BufWritePre',
     opts = {
@@ -158,6 +175,7 @@ return {
     },
   },
   {
+    lazy = true,
     'neovim/nvim-lspconfig',
     opts = function ()
       local lspconfig = require ('lspconfig')
@@ -193,6 +211,7 @@ return {
     end,
   },
   {
+    lazy = true,
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
@@ -260,6 +279,7 @@ return {
     },
   },
   {
+    lazy = true,
     'lewis6991/gitsigns.nvim',
     opts = {
       signs = {
@@ -313,6 +333,7 @@ return {
     },
   },
   {
+    lazy = true,
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
     init = function ()
@@ -343,6 +364,7 @@ return {
     },
   },
   {
+    lazy = true,
     'echasnovski/mini.nvim',
     version = '*',
     config = function ()
