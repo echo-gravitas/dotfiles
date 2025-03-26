@@ -4,7 +4,7 @@ local o = vim.o
 o.cursorlineopt = 'both'
 o.number = true
 o.relativenumber = true
-o.scrolloff = 5
+o.scrolloff = 10
 o.laststatus = 3
 o.guicursor = 'n-v-c:hor20-blinkwait0-blinkon1000-blinkoff1000,'
   .. 'i-ci-ve:ver25-blinkwait0-blinkon1000-blinkoff1000'
