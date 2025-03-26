@@ -1,7 +1,7 @@
+---
 repositories:
   - path: ssh://darkstar-backup@backup-server/mnt/backup/darkstar-arch
     label: BackupServer
-
 source_directories:
   - /home/darkstar
   - /etc
@@ -9,26 +9,22 @@ source_directories:
   - /root
   - /usr/share/fonts
   - /var/log
-
 exclude_patterns:
-  - "**/node_modules"
-  - "**/.cache"
+  - '**/node_modules'
+  - '**/.cache'
+  - '**/.npm'
+  - '**/.mozilla'
   - /home/darkstar/Private Data
-
 keep_daily: 7
 keep_weekly: 4
 keep_monthly: 6
-
 checks:
   - name: repository
   - name: archives
   - name: data
     frequency: 2 weeks
-
 exclude_caches: true
-
 encryption_passcommand: systemd-creds decrypt /etc/systemd/credentials/borgmatic
-
 healthchecks:
   ping_url: https://hc-ping.com/d3029bd3-7f3f-41ef-895e-b595f6a46a18
   send_logs: false

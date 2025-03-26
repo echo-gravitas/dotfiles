@@ -43,7 +43,7 @@ alias sctl="sudo systemctl"
 alias jrnl="journalctl"
 alias sjrnl="sudo journalctl"
 alias mail="aerc"
-alias clearnvim="rm -rf ~/.local/share/nvim ~/.local/state/nvim"
+alias clearnvim="rm -rf ~/.local/share/nvim ~/.local/state/nvim ~/.config/nvim/lazy-lock.json"
 
 # Load and initialise completion system
 autoload -Uz compinit

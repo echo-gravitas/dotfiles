@@ -2,6 +2,11 @@ require ('nvchad.mappings')
 
 local map = vim.keymap.set
 
+map ('t', '<Esc>', '<C-\\><C-n>', {
+  noremap = true,
+  silent = true,
+})
+
 map (
   'n',
   '<leader>e',

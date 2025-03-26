@@ -1,6 +1,9 @@
 return {
   {
-    lazy = true,
+    lazy = false,
+    'tpope/vim-fugitive',
+  },
+  {
     'yetone/avante.nvim',
     event = 'VeryLazy',
     version = false,
@@ -15,7 +18,6 @@ return {
         --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
       },
     },
-    lazy = true,
     build = 'make',
     dependencies = {
       'nvim-treesitter/nvim-treesitter',
@@ -45,7 +47,6 @@ return {
     },
   },
   {
-    lazy = true,
     'MeanderingProgrammer/render-markdown.nvim',
     opts = {
       file_types = {
@@ -71,7 +72,7 @@ return {
       'MunifTanjim/nui.nvim',
     },
     opts = {
-      close_if_last_window = false,
+      close_if_last_window = true,
       popup_border_style = 'solid',
       enable_git_status = true,
       enable_modified_markers = true,
@@ -114,7 +115,6 @@ return {
     },
   },
   {
-    lazy = true,
     'folke/which-key.nvim',
     event = 'VimEnter',
     opts = {
@@ -122,7 +122,6 @@ return {
     },
   },
   {
-    lazy = true,
     'folke/todo-comments.nvim',
     event = 'VimEnter',
     opts = {
@@ -130,7 +129,6 @@ return {
     },
   },
   {
-    lazy = true,
     'nvim-telescope/telescope.nvim',
     opts = {
       defaults = {
@@ -149,7 +147,6 @@ return {
     },
   },
   {
-    lazy = true,
     'stevearc/conform.nvim',
     event = 'BufWritePre',
     opts = {
@@ -175,7 +172,6 @@ return {
     },
   },
   {
-    lazy = true,
     'neovim/nvim-lspconfig',
     opts = function ()
       local lspconfig = require ('lspconfig')
@@ -211,7 +207,6 @@ return {
     end,
   },
   {
-    lazy = true,
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
@@ -279,7 +274,6 @@ return {
     },
   },
   {
-    lazy = true,
     'lewis6991/gitsigns.nvim',
     opts = {
       signs = {
@@ -333,7 +327,6 @@ return {
     },
   },
   {
-    lazy = true,
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
     init = function ()
@@ -364,7 +357,6 @@ return {
     },
   },
   {
-    lazy = true,
     'echasnovski/mini.nvim',
     version = '*',
     config = function ()
