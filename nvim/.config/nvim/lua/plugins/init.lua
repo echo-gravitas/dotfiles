@@ -14,7 +14,7 @@ return {
         model = 'gpt-4o',
         timeout = 30000,
         -- temperature = 0,
-        max_completion_tokens = 8192,
+        --max_completion_tokens = 8192,
         --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
       },
     },
@@ -72,8 +72,7 @@ return {
       'MunifTanjim/nui.nvim',
     },
     opts = {
-      close_if_last_window = true,
-      popup_border_style = 'solid',
+      close_if_last_window = false,
       enable_git_status = true,
       enable_modified_markers = true,
       enable_diagnostics = true,
