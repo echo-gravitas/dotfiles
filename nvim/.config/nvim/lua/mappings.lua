@@ -53,5 +53,23 @@ map (
   { desc = 'Decrease horizontal size by 10' }
 )
 
-map ('n', ';', ':', { desc = 'Enter normal mode' })
-map ('i', 'jk', '<ESC>', { desc = 'Leave insert mode' })
+map ('i', 'jk', '<ESC>', {
+  desc = 'Leave insert mode',
+})
+
+map ('n', ';', ':', {
+  desc = 'Enter normal mode',
+})
+
+map ('n', '<C-Left>', '<C-w>h', {
+  desc = 'Focus left window',
+})
+map ('n', '<C-Down>', '<C-w>j', {
+  desc = 'Focus bottom window',
+})
+map ('n', '<C-Up>', '<C-w>k', {
+  desc = 'Focus top window',
+})
+map ('n', '<C-Right>', '<C-w>l', {
+  desc = 'Focus right window',
+})

@@ -24,7 +24,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export SDL_VIDEO_X11_DGAMOUSE=0
 export XDG_SESSION_TYPE=wayland
 
-
 # Misc aliases
 alias spider="telnet dx.da0bcc.de 7300"
 alias c="clear"
