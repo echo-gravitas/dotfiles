@@ -4,6 +4,15 @@ return {
     'tpope/vim-fugitive',
   },
   {
+    'folke/noice.nvim',
+    event = 'VeryLazy',
+    opts = {},
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+      'rcarriga/nvim-notify',
+    },
+  },
+  {
     'yetone/avante.nvim',
     event = 'VeryLazy',
     version = false,
@@ -13,9 +22,16 @@ return {
         endpoint = 'https://api.openai.com/v1',
         model = 'gpt-4o',
         timeout = 30000,
-        -- temperature = 0,
-        --max_completion_tokens = 8192,
-        --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+        temperature = 0,
+        max_tokens = 8192,
+        --reasoning_effort = "medium",
+      },
+      gemini = {
+        endpoint = 'https://generativelanguage.googleapis.com/v1beta/models',
+        model = 'gemini-2.5-pro-exp-03-25',
+        timeout = 30000,
+        temperature = 0,
+        max_tokens = 8192,
       },
     },
     build = 'make',
@@ -43,6 +59,13 @@ return {
             use_absolute_path = true,
           },
         },
+      },
+      {
+        'MeanderingProgrammer/render-markdown.nvim',
+        opts = {
+          file_types = { 'markdown', 'Avante' },
+        },
+        ft = { 'markdown', 'Avante' },
       },
     },
   },
