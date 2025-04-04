@@ -2,6 +2,7 @@ require ('nvchad.options')
 
 local o = vim.o
 o.cursorlineopt = 'both'
+o.termguicolors = true
 o.cursorcolumn = false
 o.number = true
 o.relativenumber = false
