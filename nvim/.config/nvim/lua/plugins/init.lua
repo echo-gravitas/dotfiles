@@ -4,12 +4,21 @@ return {
     'tpope/vim-fugitive',
   },
   {
+    event = 'VimEnter',
     'folke/noice.nvim',
-    event = 'VeryLazy',
-    opts = {},
     dependencies = {
       'MunifTanjim/nui.nvim',
       'rcarriga/nvim-notify',
+    },
+    opts = {
+      views = {
+        notify = {
+          merge = false,
+          render = 'default',
+          timeout = 3000,
+          stages = 'fade',
+        },
+      },
     },
   },
   {
@@ -17,7 +26,7 @@ return {
     event = 'VeryLazy',
     version = false,
     opts = {
-      provider = 'openai',
+      provider = 'gemini',
       openai = {
         endpoint = 'https://api.openai.com/v1',
         model = 'gpt-4o',

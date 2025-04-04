@@ -2,6 +2,10 @@ local M = {}
 
 M.base46 = {
   theme = 'catppuccin',
+  theme_toggle = {
+    'catppuccin',
+    'onenord_light',
+  },
 }
 
 M.nvdash = {
