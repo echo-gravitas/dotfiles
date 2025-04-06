@@ -5,6 +5,20 @@ vim.keymap.set ('t', '<Esc>', '<C-\\><C-n>', {
 
 vim.keymap.set (
   'n',
+  '<leader>ff',
+  '<CMD>Telescope find_files<CR>',
+  { desc = 'Telescope Find Files' }
+)
+
+vim.keymap.set (
+  'n',
+  '<leader>fw',
+  '<CMD>Telescope live_grep<CR>',
+  { desc = 'Telescope Live Grep' }
+)
+
+vim.keymap.set (
+  'n',
   '<leader>e',
   '<CMD>Neotree focus<CR>',
   { desc = 'Focus Neotree window' }

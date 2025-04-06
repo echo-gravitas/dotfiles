@@ -1,6 +1,7 @@
 return {
   cmd = {
-    'typesript-language-server',
+    'typescript-language-server',
+    '--stdio',
   },
   root_markers = {
     '.git',
