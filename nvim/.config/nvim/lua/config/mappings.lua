@@ -1,3 +1,21 @@
+vim.keymap.set (
+  'n',
+  '<Tab>',
+  '<CMD>BufferLineCycleNext<CR>',
+  { desc = 'Cycle Tabs' }
+)
+vim.keymap.set (
+  'n',
+  '<leader>sh',
+  '<CMD>split<CR>',
+  { desc = 'Split horizontal' }
+)
+vim.keymap.set (
+  'n',
+  '<leader>sv',
+  '<CMD>vsplit<CR>',
+  { desc = 'Split vertical' }
+)
 vim.keymap.set ('t', '<Esc>', '<C-\\><C-n>', {
   noremap = true,
   silent = true,

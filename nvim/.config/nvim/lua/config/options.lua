@@ -1,3 +1,4 @@
+vim.opt.termguicolors = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'both'
@@ -29,4 +30,5 @@ vim.api.nvim_create_autocmd ('TextYankPost', {
 vim.lsp.enable ({
   'lua-language-server',
   'typescript-language-server',
+  'pyright',
 })

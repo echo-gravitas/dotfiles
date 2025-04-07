@@ -9,7 +9,6 @@ return {
     require ('mini.pairs').setup ()
     require ('mini.surround').setup ()
     require ('mini.starter').setup ()
-    require ('mini.tabline').setup ()
     require ('mini.trailspace').setup ()
   end,
 }
