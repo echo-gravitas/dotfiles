@@ -12,11 +12,24 @@ return {
       week_header = {
         enable = true,
       },
+      packages = {
+        enable = true,
+      },
+      project = {
+        enable = true,
+        limit = 5,
+        icon = ' ',
+      },
+      mru = {
+        enable = true,
+        limit = 10,
+        icon = ' ',
+      },
       shortcut = {
         {
           desc = ' Lazy ',
           action = 'Lazy',
-          key = 'u',
+          key = 'l',
         },
         {
           desc = ' Telescope ',
