@@ -1,4 +1,5 @@
 return {
+  event = { 'BufReadPre', 'BufNewFile' },
   'lukas-reineke/indent-blankline.nvim',
   main = 'ibl',
   init = function ()

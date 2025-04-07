@@ -25,9 +25,17 @@ return {
       },
       menu = {
         draw = {
-          columns = {
-            { 'kind_icon', 'label', 'label_description', gap = 1 },
-            { 'kind' },
+          treesitter = { 'lsp' },
+          columns = { { 'kind_icon' }, { 'label', gap = 1 } },
+          components = {
+            label = {
+              text = function (ctx)
+                return require ('colorful-menu').blink_components_text (ctx)
+              end,
+              highlight = function (ctx)
+                return require ('colorful-menu').blink_components_highlight (ctx)
+              end,
+            },
           },
         },
       },
@@ -45,7 +53,10 @@ return {
       implementation = 'prefer_rust_with_warning',
     },
     signature = {
-      enabled = false,
+      enabled = true,
+      window = {
+        show_documentation = false,
+      },
     },
   },
   opts_extend = {
