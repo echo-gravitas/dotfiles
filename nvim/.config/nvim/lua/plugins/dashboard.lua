@@ -47,6 +47,11 @@ return {
           key = 'n',
         },
       },
+      footer = {
+        '',
+        '',
+        '✨ You have all weapons you need. Now fight! ✨',
+      },
     },
   },
 }
