@@ -5,7 +5,7 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'both'
 vim.opt.number = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 vim.opt.laststatus = 3
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
@@ -21,14 +21,6 @@ vim.opt.guicursor = 'n-v-c:block-blinkwait0-blinkon1000-blinkoff1000,'
 vim.diagnostic.config ({
   virtual_text = true,
 })
-
--- vim.api.nvim_create_autocmd ('TermOpen', {
---   group = vim.api.nvim_create_augroup ('custom-term-open', { clear = true }),
---   callback = function ()
---     vim.opt.number = false
---     vim.opt.relativenumber = false
---   end,
--- })
 
 vim.api.nvim_create_autocmd ('TextYankPost', {
   desc = 'Highlight when copying text',

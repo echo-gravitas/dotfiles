@@ -14,7 +14,7 @@ return {
     sort_case_insensitive = true,
     window = {
       position = 'left',
-      width = 35,
+      width = 30,
       auto_expand_width = false,
       mappings = {
         ['oa'] = 'avante_add_files',
