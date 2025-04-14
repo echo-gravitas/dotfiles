@@ -1,4 +1,4 @@
-vim.opt.scrolloff = 3
+-- vim.opt.scrolloff = 3
 vim.opt.whichwrap:append ('<>[]hl')
 vim.opt.termguicolors = true
 vim.opt.clipboard = 'unnamedplus'

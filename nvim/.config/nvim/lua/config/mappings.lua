@@ -5,7 +5,7 @@ vim.keymap.set (
   { desc = 'Force delete buffer' }
 )
 
-vim.keymap.set ('n', '<leader>tv', function ()
+vim.keymap.set ('n', '<leader>th', function ()
   vim.cmd.vnew ()
   vim.cmd.term ()
   vim.cmd.wincmd ('J')
