@@ -3,6 +3,9 @@ return {
   event = 'VeryLazy',
   version = false,
   opts = {
+    selector = {
+      provider = 'snacks',
+    },
     provider = 'gemini',
     openai = {
       endpoint = 'https://api.openai.com/v1',

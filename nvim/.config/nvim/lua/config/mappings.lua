@@ -5,12 +5,12 @@ vim.keymap.set (
   { desc = 'Force delete buffer' }
 )
 
-vim.keymap.set ('n', '<leader>th', function ()
-  vim.cmd.vnew ()
-  vim.cmd.term ()
-  vim.cmd.wincmd ('J')
-  vim.api.nvim_win_set_height (0, 10)
-end, { desc = 'Open new vertical terminal' })
+vim.keymap.set (
+  'n',
+  '<leader>t',
+  '<CMD>lua Snacks.terminal.open()<CR>',
+  { desc = 'Open Term Window' }
+)
 
 vim.keymap.set ('n', '<leader>bd', '<CMD>bd<CR>', {
   desc = 'Delete buffer',
@@ -29,12 +29,14 @@ vim.keymap.set (
   '<CMD>BufferLineCycleNext<CR>',
   { desc = 'Cycle Tabs' }
 )
+
 vim.keymap.set (
   'n',
   '<leader>sh',
   '<CMD>split<CR>',
   { desc = 'Split horizontal' }
 )
+
 vim.keymap.set (
   'n',
   '<leader>sv',
@@ -58,16 +60,9 @@ vim.keymap.set (
 
 vim.keymap.set (
   'n',
-  '<leader>e',
-  '<CMD>Neotree focus<CR>',
-  { desc = 'Focus Neotree window' }
-)
-
-vim.keymap.set (
-  'n',
-  '<leader>q',
-  '<CMD>Neotree close<CR>',
-  { desc = 'Close Neotree window' }
+  '<leader><leader>',
+  '<CMD>lua Snacks.picker.explorer()<CR>',
+  { desc = 'Explorer toggle' }
 )
 
 vim.keymap.set (
@@ -121,10 +116,4 @@ vim.keymap.set ('n', '<C-Up>', '<C-w>k', {
 })
 vim.keymap.set ('n', '<C-Right>', '<C-w>l', {
   desc = 'Focus right window',
-})
-
-vim.keymap.set ('t', '<Esc>', '<C-\\><C-n>', {
-  desc = 'Exit terminal mode',
-  noremap = true,
-  silent = true,
 })
