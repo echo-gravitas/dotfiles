@@ -30,12 +30,12 @@ vim.keymap.set (
   { desc = 'Split vertical' }
 )
 
-vim.keymap.set (
-  'n',
-  '<leader><leader>',
-  '<CMD>lua Snacks.picker.explorer()<CR>',
-  { desc = 'Explorer toggle' }
-)
+-- vim.keymap.set (
+--   'n',
+--   '<leader><leader>',
+--   '<CMD>lua Snacks.picker.explorer()<CR>',
+--   { desc = 'Explorer toggle' }
+-- )
 
 vim.keymap.set (
   'n',

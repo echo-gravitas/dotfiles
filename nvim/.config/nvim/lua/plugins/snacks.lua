@@ -137,7 +137,7 @@ return {
     rename = { enabled = true },
     scope = { enabled = true },
     scratch = { enabled = true },
-    scroll = { enabled = true },
+    scroll = { enabled = false },
     statuscolumn = {
       enabled = true,
     },
@@ -166,8 +166,8 @@ return {
     words = { enabled = true },
     zen = { enabled = true },
   },
+
   keys = {
-    -- Top Pickers & Explorer
     {
       '<leader><space>',
       function ()
@@ -210,7 +210,6 @@ return {
       end,
       desc = 'File Explorer',
     },
-    -- find
     {
       '<leader>fb',
       function ()
@@ -253,7 +252,6 @@ return {
       end,
       desc = 'Recent',
     },
-    -- git
     {
       '<leader>gb',
       function ()
@@ -303,7 +301,6 @@ return {
       end,
       desc = 'Git Log File',
     },
-    -- Grep
     {
       '<leader>sb',
       function ()
@@ -333,7 +330,6 @@ return {
       desc = 'Visual selection or word',
       mode = { 'n', 'x' },
     },
-    -- search
     {
       '<leader>s"',
       function ()
@@ -481,7 +477,6 @@ return {
       end,
       desc = 'Colorschemes',
     },
-    -- LSP
     {
       'gd',
       function ()
@@ -532,7 +527,6 @@ return {
       end,
       desc = 'LSP Workspace Symbols',
     },
-    -- Other
     {
       '<leader>z',
       function ()
