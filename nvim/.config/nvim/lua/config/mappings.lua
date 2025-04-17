@@ -4,27 +4,9 @@ vim.keymap.set ('n', '<leader>fo', '<CMD>foldopen<CR>', { desc = 'Fold open' })
 
 vim.keymap.set (
   'n',
-  '<leader>bdf',
-  '<CMD>bd!<CR>',
-  { desc = 'Force delete buffer' }
-)
-
-vim.keymap.set (
-  'n',
   '<leader>t',
   '<CMD>lua Snacks.terminal.open()<CR>',
   { desc = 'Open Term Window' }
-)
-
-vim.keymap.set ('n', '<leader>bd', '<CMD>bd<CR>', {
-  desc = 'Delete buffer',
-})
-
-vim.keymap.set (
-  'n',
-  '<leader>bn',
-  '<CMD>enew<CR>',
-  { desc = 'Create new buffer' }
 )
 
 vim.keymap.set (
@@ -46,20 +28,6 @@ vim.keymap.set (
   '<leader>sv',
   '<CMD>vsplit<CR>',
   { desc = 'Split vertical' }
-)
-
-vim.keymap.set (
-  'n',
-  '<leader>ff',
-  '<CMD>Telescope find_files<CR>',
-  { desc = 'Telescope Find Files' }
-)
-
-vim.keymap.set (
-  'n',
-  '<leader>fw',
-  '<CMD>Telescope live_grep<CR>',
-  { desc = 'Telescope Live Grep' }
 )
 
 vim.keymap.set (
@@ -101,7 +69,7 @@ vim.keymap.set (
   { desc = 'Decrease horizontal size by 10' }
 )
 
-vim.keymap.set ('i', 'jk', '<ESC>', {
+vim.keymap.set ('i', 'kk', '<ESC>', {
   desc = 'Leave insert mode',
 })
 
