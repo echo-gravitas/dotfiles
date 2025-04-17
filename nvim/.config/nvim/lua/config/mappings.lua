@@ -1,3 +1,7 @@
+vim.keymap.set ('n', '<leader>fc', '<CMD>foldclose<CR>', { desc = 'Fold close' })
+
+vim.keymap.set ('n', '<leader>fo', '<CMD>foldopen<CR>', { desc = 'Fold open' })
+
 vim.keymap.set (
   'n',
   '<leader>bdf',
