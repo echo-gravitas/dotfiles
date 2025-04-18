@@ -8,14 +8,19 @@ return {
     bufdelete = { enabled = true },
     dashboard = {
       enabled = true,
-      width = 75,
+      width = 80,
       sections = {
         {
           pane = 1,
           section = 'terminal',
-          cmd = 'ascii-image-converter ~/.config/avatar/hacker.webp --threshold 1 -bCW75',
+          cmd = 'ascii-image-converter ~/.config/avatar/hacker.webp -CbW80 --threshold 60',
           hl = 'header',
-          height = 21,
+          height = 22,
+          padding = 1,
+        },
+        {
+          pane = 1,
+          section = 'startup',
           padding = 1,
         },
         {
@@ -28,7 +33,6 @@ return {
           icon = ' ',
           title = 'Recent Files',
           section = 'recent_files',
-          -- indent = 2,
           padding = 1,
         },
         {
@@ -36,7 +40,6 @@ return {
           icon = ' ',
           title = 'Projects',
           section = 'projects',
-          -- indent = 2,
         },
       },
       preset = {
@@ -195,7 +198,43 @@ return {
         },
       },
     },
-    terminal = { enabled = true },
+    terminal = {
+      enabled = true,
+      bo = {
+        filetype = 'snacks_terminal',
+      },
+      wo = {},
+      keys = {
+        q = 'hide',
+        gf = function (self)
+          local f = vim.fn.findfile (vim.fn.expand ('<cfile>'), '**')
+          if f == '' then
+            Snacks.notify.warn ('No file under cursor')
+          else
+            self:hide ()
+            vim.schedule (function ()
+              vim.cmd ('e ' .. f)
+            end)
+          end
+        end,
+        term_normal = {
+          '<esc>',
+          function (self)
+            self.esc_timer = self.esc_timer or (vim.uv or vim.loop).new_timer ()
+            if self.esc_timer:is_active () then
+              self.esc_timer:stop ()
+              vim.cmd ('stopinsert')
+            else
+              self.esc_timer:start (200, 0, function () end)
+              return '<esc>'
+            end
+          end,
+          mode = 't',
+          expr = true,
+          desc = 'Double escape to normal mode',
+        },
+      },
+    },
     toggle = { enabled = true },
     util = { enabled = true },
     win = { enabled = true },
