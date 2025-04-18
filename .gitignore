@@ -1,2 +1,5 @@
 aerc/.config/aerc/accounts.conf
 nvim/.config/nvim/lazy-lock.json
+codex/.codex/sessions
+codex/.codex/history.json
+codex/.codex/instructions.md
