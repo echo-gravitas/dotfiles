@@ -5,11 +5,6 @@ return {
     opts = {},
   },
   {
-    'echasnovski/mini.animate',
-    version = '*',
-    opts = {},
-  },
-  {
     'echasnovski/mini.pairs',
     version = '*',
     opts = {},

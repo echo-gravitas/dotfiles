@@ -27,8 +27,9 @@ export XDG_SESSION_TYPE=wayland
 # Misc aliases
 alias spider="telnet dx.da0bcc.de 7300"
 alias c="clear"
-alias l="ls -Alsh --color"
-alias ff="c;fastfetch"
+alias lts="eza -1lga --icons=auto --git --total-size"
+alias l="eza -1lga --icons=auto --git"
+alias ff="c;hyfetch"
 alias n="nvim"
 alias v="nvim"
 alias nano="nvim"

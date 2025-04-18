@@ -3,6 +3,9 @@ return {
   event = 'VeryLazy',
   version = false,
   opts = {
+    selector = {
+      provider = 'snacks',
+    },
     provider = 'gemini',
     openai = {
       endpoint = 'https://api.openai.com/v1',
@@ -10,14 +13,13 @@ return {
       timeout = 30000,
       temperature = 0,
       max_tokens = 8192,
-      --reasoning_effort = "medium",
     },
     gemini = {
       endpoint = 'https://generativelanguage.googleapis.com/v1beta/models',
-      model = 'gemini-2.5-pro-exp-03-25',
+      model = 'gemini-2.5-pro-preview-03-25',
       timeout = 30000,
       temperature = 0,
-      max_tokens = 8192,
+      max_tokens = 1048576,
     },
   },
   build = 'make',
