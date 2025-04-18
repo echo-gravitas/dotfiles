@@ -4,44 +4,26 @@ return {
     'rafamadriz/friendly-snippets',
     'Kaiser-Yang/blink-cmp-avante',
   },
-
   version = '1.*',
+  ---@module 'blink.cmp'
+  ---@type blink.cmp.Config
   opts = {
     keymap = {
-      preset = 'none',
+      preset = 'default',
       ['<Up>'] = { 'select_prev', 'fallback' },
       ['<Down>'] = { 'select_next', 'fallback' },
       ['<Tab>'] = { 'select_next', 'fallback' },
       ['<S-Tab>'] = { 'select_prev', 'fallback' },
       ['<CR>'] = { 'select_and_accept', 'fallback' },
     },
-
     appearance = {
       nerd_font_variant = 'mono',
     },
-
     completion = {
       documentation = {
         auto_show = true,
       },
-      menu = {
-        draw = {
-          treesitter = { 'lsp' },
-          columns = { { 'kind_icon' }, { 'label', gap = 1 } },
-          components = {
-            label = {
-              text = function (ctx)
-                return require ('colorful-menu').blink_components_text (ctx)
-              end,
-              highlight = function (ctx)
-                return require ('colorful-menu').blink_components_highlight (ctx)
-              end,
-            },
-          },
-        },
-      },
     },
-
     sources = {
       default = {
         'avante',
@@ -54,21 +36,14 @@ return {
         avante = {
           module = 'blink-cmp-avante',
           name = 'Avante',
-          opts = {},
+          opts = {
+            -- options for blink-cmp-avante
+          },
         },
       },
+      min_keyword_length = 0,
     },
-    fuzzy = {
-      implementation = 'prefer_rust_with_warning',
-    },
-    signature = {
-      enabled = true,
-      window = {
-        show_documentation = false,
-      },
-    },
+    fuzzy = { implementation = 'prefer_rust_with_warning' },
   },
-  opts_extend = {
-    'sources.default',
-  },
+  opts_extend = { 'sources.default' },
 }

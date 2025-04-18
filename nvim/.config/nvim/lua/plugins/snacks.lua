@@ -28,7 +28,7 @@ return {
           icon = ' ',
           title = 'Recent Files',
           section = 'recent_files',
-          indent = 2,
+          -- indent = 2,
           padding = 1,
         },
         {
@@ -36,7 +36,7 @@ return {
           icon = ' ',
           title = 'Projects',
           section = 'projects',
-          indent = 2,
+          -- indent = 2,
         },
       },
       preset = {
@@ -45,7 +45,7 @@ return {
             icon = ' ',
             key = 'f',
             desc = 'Find File',
-            action = ':lua Snacks.dashboard.pick(\'files\')',
+            action = ':lua Snacks.picker.files()',
           },
           {
             icon = ' ',
@@ -57,7 +57,7 @@ return {
             icon = ' ',
             key = 'g',
             desc = 'Find Text',
-            action = ':lua Snacks.dashboard.pick(\'live_grep\')',
+            action = ':lua Snacks.picker.grep()',
           },
           {
             icon = '󰙅 ',
@@ -88,7 +88,10 @@ return {
     },
     debug = { enabled = true },
     dim = { enabled = true },
-    explorer = { enabled = true },
+    explorer = {
+      enabled = true,
+      replace_netrw = true,
+    },
     git = { enabled = true },
     gitbrowse = { enabled = true },
     image = { enabled = true },
@@ -100,6 +103,35 @@ return {
     notify = { enabled = true },
     picker = {
       enabled = true,
+      sources = {
+        explorer = {
+          hidden = true,
+        },
+        grep = {
+          ignored = true,
+          hidden = true,
+          exclude = {
+            '.cache',
+            '.local',
+            '.var',
+            '.vscode',
+            'go',
+            '**/node_modules',
+          },
+        },
+        files = {
+          ignored = true,
+          hidden = true,
+          exclude = {
+            '.cache',
+            '.local',
+            '.var',
+            '.vscode',
+            'go',
+            '**/node_modules',
+          },
+        },
+      },
       layouts = {
         sidebar = {
           preview = 'main',

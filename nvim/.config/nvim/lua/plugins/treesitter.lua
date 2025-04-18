@@ -3,7 +3,7 @@ return {
   build = ':TSUpdate',
   opts = {
     auto_install = true,
-    sync_install = true,
+    -- sync_install = true,
     highlight = {
       enabled = true,
     },
