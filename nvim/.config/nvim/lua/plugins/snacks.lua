@@ -172,6 +172,10 @@ return {
     scroll = { enabled = false },
     statuscolumn = {
       enabled = true,
+      folds = {
+        open = true, -- show open fold icons
+        git_hl = true, -- use Git Signs hl for fold icons
+      },
     },
     styles = {
       zen = {
