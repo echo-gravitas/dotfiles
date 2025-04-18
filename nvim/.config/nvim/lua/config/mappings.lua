@@ -1,26 +1,12 @@
-vim.keymap.set (
-  'n',
-  '<leader>bdf',
-  '<CMD>bd!<CR>',
-  { desc = 'Force delete buffer' }
-)
+vim.keymap.set ('n', '<leader>fc', '<CMD>foldclose<CR>', { desc = 'Fold close' })
 
-vim.keymap.set ('n', '<leader>th', function ()
-  vim.cmd.vnew ()
-  vim.cmd.term ()
-  vim.cmd.wincmd ('J')
-  vim.api.nvim_win_set_height (0, 10)
-end, { desc = 'Open new vertical terminal' })
-
-vim.keymap.set ('n', '<leader>bd', '<CMD>bd<CR>', {
-  desc = 'Delete buffer',
-})
+vim.keymap.set ('n', '<leader>fo', '<CMD>foldopen<CR>', { desc = 'Fold open' })
 
 vim.keymap.set (
   'n',
-  '<leader>bn',
-  '<CMD>enew<CR>',
-  { desc = 'Create new buffer' }
+  '<leader>t',
+  '<CMD>lua Snacks.terminal.open()<CR>',
+  { desc = 'Open Term Window' }
 )
 
 vim.keymap.set (
@@ -29,12 +15,14 @@ vim.keymap.set (
   '<CMD>BufferLineCycleNext<CR>',
   { desc = 'Cycle Tabs' }
 )
+
 vim.keymap.set (
   'n',
   '<leader>sh',
   '<CMD>split<CR>',
   { desc = 'Split horizontal' }
 )
+
 vim.keymap.set (
   'n',
   '<leader>sv',
@@ -42,33 +30,12 @@ vim.keymap.set (
   { desc = 'Split vertical' }
 )
 
-vim.keymap.set (
-  'n',
-  '<leader>ff',
-  '<CMD>Telescope find_files<CR>',
-  { desc = 'Telescope Find Files' }
-)
-
-vim.keymap.set (
-  'n',
-  '<leader>fw',
-  '<CMD>Telescope live_grep<CR>',
-  { desc = 'Telescope Live Grep' }
-)
-
-vim.keymap.set (
-  'n',
-  '<leader>e',
-  '<CMD>Neotree focus<CR>',
-  { desc = 'Focus Neotree window' }
-)
-
-vim.keymap.set (
-  'n',
-  '<leader>q',
-  '<CMD>Neotree close<CR>',
-  { desc = 'Close Neotree window' }
-)
+-- vim.keymap.set (
+--   'n',
+--   '<leader><leader>',
+--   '<CMD>lua Snacks.picker.explorer()<CR>',
+--   { desc = 'Explorer toggle' }
+-- )
 
 vim.keymap.set (
   'n',
@@ -102,7 +69,7 @@ vim.keymap.set (
   { desc = 'Decrease horizontal size by 10' }
 )
 
-vim.keymap.set ('i', 'jk', '<ESC>', {
+vim.keymap.set ('i', 'kk', '<ESC>', {
   desc = 'Leave insert mode',
 })
 
@@ -121,10 +88,4 @@ vim.keymap.set ('n', '<C-Up>', '<C-w>k', {
 })
 vim.keymap.set ('n', '<C-Right>', '<C-w>l', {
   desc = 'Focus right window',
-})
-
-vim.keymap.set ('t', '<Esc>', '<C-\\><C-n>', {
-  desc = 'Exit terminal mode',
-  noremap = true,
-  silent = true,
 })

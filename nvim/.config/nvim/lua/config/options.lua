@@ -1,4 +1,4 @@
--- vim.opt.scrolloff = 3
+vim.opt.scrolloff = 3
 vim.opt.whichwrap:append ('<>[]hl')
 vim.opt.termguicolors = true
 vim.opt.clipboard = 'unnamedplus'
@@ -12,6 +12,13 @@ vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
+
+-- Folding settings
+vim.opt.foldmethod = 'indent' -- Fold based on indentation
+vim.opt.foldlevel = 99 -- Start with all folds open
+vim.opt.foldenable = true -- Enable folding
+vim.opt.foldlevelstart = 99 -- Don't automatically close folds when opening a file
+
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.mouse = 'a'
