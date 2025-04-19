@@ -6,14 +6,21 @@ vim.keymap.set (
   'n',
   '<leader>t',
   '<CMD>lua Snacks.terminal.open()<CR>',
-  { desc = 'Open Term Window' }
+  { desc = 'Open CLI' }
 )
 
 vim.keymap.set (
   'n',
   '<Tab>',
   '<CMD>BufferLineCycleNext<CR>',
-  { desc = 'Cycle Tabs' }
+  { desc = 'Next Buffer Tab' }
+)
+
+vim.keymap.set (
+  'n',
+  '<S-Tab>',
+  '<CMD>BufferLineCyclePrev<CR>',
+  { desc = 'Previous Buffer Tab' }
 )
 
 vim.keymap.set (

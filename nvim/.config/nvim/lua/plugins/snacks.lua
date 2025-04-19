@@ -13,14 +13,9 @@ return {
         {
           pane = 1,
           section = 'terminal',
-          cmd = 'ascii-image-converter ~/.config/avatar/hacker.webp -CbW80 --threshold 60',
+          cmd = 'chafa ~/.config/avatar/hacker.webp --format symbols --symbols vhalf',
           hl = 'header',
           height = 22,
-          padding = 1,
-        },
-        {
-          pane = 1,
-          section = 'startup',
           padding = 1,
         },
         {
@@ -30,14 +25,14 @@ return {
         },
         {
           pane = 2,
-          icon = ' ',
+          icon = '',
           title = 'Recent Files',
           section = 'recent_files',
           padding = 1,
         },
         {
           pane = 2,
-          icon = ' ',
+          icon = '',
           title = 'Projects',
           section = 'projects',
         },
@@ -45,43 +40,43 @@ return {
       preset = {
         keys = {
           {
-            icon = ' ',
-            key = 'f',
-            desc = 'Find File',
-            action = ':lua Snacks.picker.files()',
-          },
-          {
-            icon = ' ',
-            key = 'n',
-            desc = 'New File',
-            action = ':ene | startinsert',
-          },
-          {
-            icon = ' ',
-            key = 'g',
-            desc = 'Find Text',
-            action = ':lua Snacks.picker.grep()',
-          },
-          {
-            icon = '󰙅 ',
-            key = 'e',
-            desc = 'Explorer',
-            action = ':lua Snacks.picker.explorer()',
-          },
-          {
-            icon = ' ',
+            icon = '',
             key = 'r',
             desc = 'Recent Files',
             action = ':lua Snacks.dashboard.pick(\'oldfiles\')',
           },
           {
-            icon = ' ',
+            icon = '󰙅',
+            key = 'e',
+            desc = 'Explorer',
+            action = ':lua Snacks.picker.explorer()',
+          },
+          {
+            icon = '',
+            key = 'f',
+            desc = 'Find File',
+            action = ':lua Snacks.picker.files()',
+          },
+          {
+            icon = '',
+            key = 'n',
+            desc = 'New File',
+            action = ':ene | startinsert',
+          },
+          {
+            icon = '',
+            key = 'g',
+            desc = 'Find Text',
+            action = ':lua Snacks.picker.grep()',
+          },
+          {
+            icon = '',
             key = 'l',
             desc = 'Lazy Check',
             action = ':Lazy check',
           },
           {
-            icon = ' ',
+            icon = '',
             key = 'm',
             desc = 'Mason Update',
             action = ':Mason',
@@ -109,6 +104,7 @@ return {
       sources = {
         explorer = {
           hidden = true,
+          ignored = true,
         },
         grep = {
           ignored = true,
