@@ -12,11 +12,15 @@ return {
       sections = {
         {
           pane = 1,
-          section = 'terminal',
-          cmd = 'chafa ~/.config/avatar/hacker.webp --format symbols --symbols vhalf',
-          hl = 'header',
-          height = 22,
+          section = 'startup',
           padding = 1,
+        },
+        {
+          pane = 1,
+          section = 'terminal',
+          cmd = 'chafa ~/.config/avatar/hacker.webp --format symbols --symbols alpha',
+          hl = 'header',
+          height = 21,
         },
         {
           pane = 2,
