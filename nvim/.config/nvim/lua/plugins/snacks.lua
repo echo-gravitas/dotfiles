@@ -12,13 +12,8 @@ return {
       sections = {
         {
           pane = 1,
-          section = 'startup',
-          padding = 1,
-        },
-        {
-          pane = 1,
           section = 'terminal',
-          cmd = 'chafa ~/.config/avatar/hacker.webp --format symbols --symbols alpha',
+          cmd = 'sleep 0.1; chafa ~/.config/avatar/hacker.webp --format symbols --symbols alpha',
           hl = 'header',
           height = 21,
         },
@@ -33,12 +28,14 @@ return {
           title = 'Recent Files',
           section = 'recent_files',
           padding = 1,
+          indent = 1,
         },
         {
           pane = 2,
           icon = '',
           title = 'Projects',
           section = 'projects',
+          indent = 1,
         },
       },
       preset = {
@@ -60,12 +57,6 @@ return {
             key = 'f',
             desc = 'Find File',
             action = ':lua Snacks.picker.files()',
-          },
-          {
-            icon = '',
-            key = 'n',
-            desc = 'New File',
-            action = ':ene | startinsert',
           },
           {
             icon = '',

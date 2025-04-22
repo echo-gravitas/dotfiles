@@ -11,6 +11,7 @@ return {
         'Avante',
         'AvanteSelectedFiles',
         'AvanteInput',
+        'snacks_terminal',
       },
     },
     sections = {

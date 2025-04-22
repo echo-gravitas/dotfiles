@@ -37,13 +37,6 @@ vim.keymap.set (
   { desc = 'Split vertical' }
 )
 
--- vim.keymap.set (
---   'n',
---   '<leader><leader>',
---   '<CMD>lua Snacks.picker.explorer()<CR>',
---   { desc = 'Explorer toggle' }
--- )
-
 vim.keymap.set (
   'n',
   '<leader>md',
@@ -57,18 +50,21 @@ vim.keymap.set (
   '<CMD>vertical resize +10<CR>',
   { desc = 'Increase vertical size by 10' }
 )
+
 vim.keymap.set (
   'n',
   '<leader><right>',
   '<CMD>vertical resize -10<CR>',
   { desc = 'Decrease vertical size by 10' }
 )
+
 vim.keymap.set (
   'n',
   '<leader><up>',
   '<CMD>resize +5<CR>',
   { desc = 'Increase horizontal size by 10' }
 )
+
 vim.keymap.set (
   'n',
   '<leader><down>',
@@ -87,12 +83,15 @@ vim.keymap.set ('n', ';', ':', {
 vim.keymap.set ('n', '<C-Left>', '<C-w>h', {
   desc = 'Focus left window',
 })
+
 vim.keymap.set ('n', '<C-Down>', '<C-w>j', {
   desc = 'Focus bottom window',
 })
+
 vim.keymap.set ('n', '<C-Up>', '<C-w>k', {
   desc = 'Focus top window',
 })
+
 vim.keymap.set ('n', '<C-Right>', '<C-w>l', {
   desc = 'Focus right window',
 })
