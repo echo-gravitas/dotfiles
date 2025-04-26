@@ -6,20 +6,14 @@ return {
     selector = {
       provider = 'snacks',
     },
-    provider = 'gemini',
+    provider = 'openai',
     openai = {
       endpoint = 'https://api.openai.com/v1',
-      model = 'gpt-4o',
-      timeout = 30000,
-      temperature = 0,
-      max_tokens = 8192,
+      model = 'gpt-4.1',
     },
     gemini = {
       endpoint = 'https://generativelanguage.googleapis.com/v1beta/models',
       model = 'gemini-2.5-pro-preview-03-25',
-      timeout = 30000,
-      temperature = 0,
-      max_tokens = 1048576,
     },
   },
   build = 'make',
@@ -47,13 +41,6 @@ return {
           use_absolute_path = true,
         },
       },
-    },
-    {
-      'MeanderingProgrammer/render-markdown.nvim',
-      opts = {
-        file_types = { 'markdown', 'Avante' },
-      },
-      ft = { 'markdown', 'Avante' },
     },
   },
 }

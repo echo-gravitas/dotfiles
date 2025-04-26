@@ -8,15 +8,14 @@ return {
     bufdelete = { enabled = true },
     dashboard = {
       enabled = true,
-      width = 75,
+      width = 80,
       sections = {
         {
           pane = 1,
           section = 'terminal',
-          cmd = 'ascii-image-converter ~/.config/avatar/hacker.webp --threshold 1 -bCW75',
+          cmd = 'chafa ~/.config/avatar/hacker.webp --format symbols --symbols alpha; sleep 1;',
           hl = 'header',
           height = 21,
-          padding = 1,
         },
         {
           pane = 2,
@@ -25,60 +24,54 @@ return {
         },
         {
           pane = 2,
-          icon = ' ',
+          icon = '',
           title = 'Recent Files',
           section = 'recent_files',
-          -- indent = 2,
           padding = 1,
+          indent = 1,
         },
         {
           pane = 2,
-          icon = ' ',
+          icon = '',
           title = 'Projects',
           section = 'projects',
-          -- indent = 2,
+          indent = 1,
         },
       },
       preset = {
         keys = {
           {
-            icon = ' ',
-            key = 'f',
-            desc = 'Find File',
-            action = ':lua Snacks.picker.files()',
-          },
-          {
-            icon = ' ',
-            key = 'n',
-            desc = 'New File',
-            action = ':ene | startinsert',
-          },
-          {
-            icon = ' ',
-            key = 'g',
-            desc = 'Find Text',
-            action = ':lua Snacks.picker.grep()',
-          },
-          {
-            icon = '󰙅 ',
-            key = 'e',
-            desc = 'Explorer',
-            action = ':lua Snacks.picker.explorer()',
-          },
-          {
-            icon = ' ',
+            icon = '',
             key = 'r',
             desc = 'Recent Files',
             action = ':lua Snacks.dashboard.pick(\'oldfiles\')',
           },
           {
-            icon = ' ',
+            icon = '󰙅',
+            key = 'e',
+            desc = 'Explorer',
+            action = ':lua Snacks.picker.explorer()',
+          },
+          {
+            icon = '',
+            key = 'f',
+            desc = 'Find File',
+            action = ':lua Snacks.picker.files()',
+          },
+          {
+            icon = '',
+            key = 'g',
+            desc = 'Find Text',
+            action = ':lua Snacks.picker.grep()',
+          },
+          {
+            icon = '',
             key = 'l',
             desc = 'Lazy Check',
             action = ':Lazy check',
           },
           {
-            icon = ' ',
+            icon = '',
             key = 'm',
             desc = 'Mason Update',
             action = ':Mason',
@@ -106,6 +99,7 @@ return {
       sources = {
         explorer = {
           hidden = true,
+          ignored = true,
         },
         grep = {
           ignored = true,
@@ -169,7 +163,7 @@ return {
     rename = { enabled = true },
     scope = { enabled = true },
     scratch = { enabled = true },
-    scroll = { enabled = false },
+    scroll = { enabled = true },
     statuscolumn = {
       enabled = true,
       folds = {
@@ -195,7 +189,43 @@ return {
         },
       },
     },
-    terminal = { enabled = true },
+    terminal = {
+      enabled = true,
+      bo = {
+        filetype = 'snacks_terminal',
+      },
+      wo = {},
+      keys = {
+        q = 'hide',
+        gf = function (self)
+          local f = vim.fn.findfile (vim.fn.expand ('<cfile>'), '**')
+          if f == '' then
+            Snacks.notify.warn ('No file under cursor')
+          else
+            self:hide ()
+            vim.schedule (function ()
+              vim.cmd ('e ' .. f)
+            end)
+          end
+        end,
+        term_normal = {
+          '<esc>',
+          function (self)
+            self.esc_timer = self.esc_timer or (vim.uv or vim.loop).new_timer ()
+            if self.esc_timer:is_active () then
+              self.esc_timer:stop ()
+              vim.cmd ('stopinsert')
+            else
+              self.esc_timer:start (200, 0, function () end)
+              return '<esc>'
+            end
+          end,
+          mode = 't',
+          expr = true,
+          desc = 'Double escape to normal mode',
+        },
+      },
+    },
     toggle = { enabled = true },
     util = { enabled = true },
     win = { enabled = true },

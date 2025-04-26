@@ -5,12 +5,13 @@ return {
   },
   opts = {
     options = {
-      theme = 'ayu_mirage',
+      theme = 'catppuccin',
       padding = 1,
       disabled_filetypes = {
         'Avante',
         'AvanteSelectedFiles',
         'AvanteInput',
+        'snacks_terminal',
       },
     },
     sections = {

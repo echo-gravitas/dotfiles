@@ -1,11 +1,11 @@
-vim.opt.scrolloff = 3
+vim.opt.scrolloff = 5
 vim.opt.whichwrap:append ('<>[]hl')
 vim.opt.termguicolors = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'both'
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.laststatus = 3
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
@@ -14,10 +14,10 @@ vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 
 -- Folding settings
-vim.opt.foldmethod = 'indent' -- Fold based on indentation
-vim.opt.foldlevel = 99 -- Start with all folds open
-vim.opt.foldenable = true -- Enable folding
-vim.opt.foldlevelstart = 99 -- Don't automatically close folds when opening a file
+vim.opt.foldmethod = 'indent'
+vim.opt.foldlevel = 99
+vim.opt.foldenable = true
+vim.opt.foldlevelstart = 99
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -42,4 +42,5 @@ vim.lsp.enable ({
   'typescript-language-server',
   'pyright',
   'taplo',
+  'markdown-oxide',
 })
