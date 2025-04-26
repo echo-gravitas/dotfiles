@@ -13,7 +13,7 @@ return {
         {
           pane = 1,
           section = 'terminal',
-          cmd = 'sleep 0.1; chafa ~/.config/avatar/hacker.webp --format symbols --symbols alpha',
+          cmd = 'chafa ~/.config/avatar/hacker.webp --format symbols --symbols alpha; sleep 1;',
           hl = 'header',
           height = 21,
         },
@@ -163,7 +163,7 @@ return {
     rename = { enabled = true },
     scope = { enabled = true },
     scratch = { enabled = true },
-    scroll = { enabled = false },
+    scroll = { enabled = true },
     statuscolumn = {
       enabled = true,
       folds = {

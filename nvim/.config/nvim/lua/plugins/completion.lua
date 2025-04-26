@@ -5,8 +5,6 @@ return {
     'Kaiser-Yang/blink-cmp-avante',
   },
   version = '1.*',
-  ---@module 'blink.cmp'
-  ---@type blink.cmp.Config
   opts = {
     keymap = {
       preset = 'default',
@@ -36,9 +34,7 @@ return {
         avante = {
           module = 'blink-cmp-avante',
           name = 'Avante',
-          opts = {
-            -- options for blink-cmp-avante
-          },
+          opts = {},
         },
       },
       min_keyword_length = 0,
