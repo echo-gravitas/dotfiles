@@ -43,7 +43,7 @@ alias sctl="sudo systemctl"
 alias jrnl="journalctl"
 alias sjrnl="sudo journalctl"
 alias mail="aerc"
-alias clearnvim="rm -rf ~/.local/share/nvim ~/.local/state/nvim ~/.config/nvim/lazy-lock.json"
+alias clearavante="rm -rf ~/.local/share/nvim/avante/ ~/.local/state/nvim/avante/"
 alias lg="lazygit"
 
 # Load and initialise completion system

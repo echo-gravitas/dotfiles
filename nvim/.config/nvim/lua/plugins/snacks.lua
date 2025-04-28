@@ -8,7 +8,7 @@ return {
     bufdelete = { enabled = true },
     dashboard = {
       enabled = true,
-      width = 80,
+      width = 71,
       sections = {
         {
           pane = 1,
@@ -163,7 +163,7 @@ return {
     rename = { enabled = true },
     scope = { enabled = true },
     scratch = { enabled = true },
-    scroll = { enabled = true },
+    scroll = { enabled = false },
     statuscolumn = {
       enabled = true,
       folds = {

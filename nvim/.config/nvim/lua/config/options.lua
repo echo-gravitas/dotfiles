@@ -1,8 +1,9 @@
-vim.opt.scrolloff = 5
+vim.opt.scrolloff = 3
 vim.opt.whichwrap:append ('<>[]hl')
 vim.opt.termguicolors = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.cursorline = true
+vim.opt.cursorcolumn = false
 vim.opt.cursorlineopt = 'both'
 vim.opt.number = true
 vim.opt.relativenumber = false
@@ -27,6 +28,7 @@ vim.opt.guicursor = 'n-v-c:block-blinkwait0-blinkon1000-blinkoff1000,'
 
 vim.diagnostic.config ({
   virtual_text = true,
+  -- virtual_lines = true,
 })
 
 vim.api.nvim_create_autocmd ('TextYankPost', {
