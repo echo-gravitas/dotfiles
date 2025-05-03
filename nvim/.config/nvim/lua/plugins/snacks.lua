@@ -73,7 +73,7 @@ return {
           {
             icon = '',
             key = 'm',
-            desc = 'Mason Update',
+            desc = 'Mason Check',
             action = ':Mason',
           },
         },
