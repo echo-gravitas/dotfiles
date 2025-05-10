@@ -6,7 +6,7 @@ return {
     selector = {
       provider = 'snacks',
     },
-    provider = 'gemini',
+    provider = 'openai',
     mode = 'legacy',
     openai = {
       endpoint = 'https://api.openai.com/v1',
@@ -14,7 +14,8 @@ return {
     },
     gemini = {
       endpoint = 'https://generativelanguage.googleapis.com/v1beta/models',
-      model = 'gemini-2.5-pro-preview-03-25',
+      -- model = 'gemini-2.5-pro-preview-03-25',
+      model = 'gemini-2.5-pro-preview-05-06',
     },
     windows = {
       position = 'right',
