@@ -14,5 +14,5 @@ background-blur             = 0
 copy-on-select              = false
 auto-update-channel         = stable
 shell-integration-features  = no-cursor
-cursor-style                = underline
+cursor-style                = block
 cursor-style-blink          = true
