@@ -3,7 +3,7 @@
         "id": "5a63e9ab-7a6b-447d-87be-5f3decb3ea25",
         "name": "Google Search",
         "keyword": "g",
-        "cmd": "https://google.ch/search?q=%s",
+        "cmd": "https://google.ch/search?q=%s&udm=14",
         "icon": "/usr/share/ulauncher/media/google-search-icon.png",
         "is_default_search": true,
         "run_without_argument": false,
@@ -18,5 +18,15 @@
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1741636655.5973988
+    },
+    "00714e81-685d-4b4f-9537-04d370ea3eb4": {
+        "id": "00714e81-685d-4b4f-9537-04d370ea3eb4",
+        "name": "Github",
+        "keyword": "git",
+        "cmd": "https://github.com/search?q=%s&type=repositories",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1746980106.3715994
     }
 }
