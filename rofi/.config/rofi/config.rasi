@@ -1,0 +1,111 @@
+@import "catppuccin-mocha.rasi"
+
+* {
+  primary: @lavender;
+  secondary: @flamingo;
+  background: @base;
+  text: @base;
+  ghosttext: @surface2;
+  highlight: underline bold;
+}
+
+configuration {
+  show-icons: false;
+  font: "MonoLisa 12";
+  display-drun: "  DRun";
+  display-window: "  Window";
+  display-run: "  Run";
+  display-ssh: "  SSH";
+  sidebar-mode: true;
+}
+
+window {
+  width: 40%;
+  height: 40%;
+  background-color: @background;
+  padding: 20;
+  border: 1;
+  border-color: @primary;
+  border-radius: 5;
+}
+
+inputbar {
+  spacing: 10;
+  padding: 0 0 10 0;
+  children: [prompt, entry];
+}
+
+prompt {
+  padding: 10 30;
+  border-radius: 5;
+  background-color: @primary;
+  text-color: @text;
+}
+
+entry {
+  padding: 10;
+  placeholder: "Start typing...";
+  placeholder-color: @ghosttext;
+  text-color: @primary;
+  }
+
+listview {
+  border: 0;
+  background-color: @background;
+  scrollbar: false;
+}
+
+element {
+  padding: 10 30;
+  border-radius: 5;
+}
+
+element normal.normal {
+  background-color: @background;
+  text-color: @primary;
+  highlight: @highlight;
+}
+
+element alternate.normal {
+  background-color: @background;
+  text-color: @primary;
+  highlight: @highlight;
+}
+
+element normal.active {
+  background-color: @background;
+  text-color: @primary;
+  highlight: @highlight;
+}
+
+element selected.normal {
+  background-color: @background;
+  text-color: @primary;
+  border: 1;
+  border-color: @primary;
+  highlight: @highlight;
+}
+
+element selected.active {
+  background-color: @primary;
+  text-color: @background;
+  highlight: @highlight;
+}
+
+element selected.urgent {
+  background-color: @primary;
+  text-color: @background;
+  high: @highlight;
+}
+
+button {
+  border-radius: 5;
+  padding: 10 5;
+  text-color: @ghosttext;
+  background-color: @background;
+}
+
+button selected {
+  background-color: @secondary;
+  text-color: @background;
+}
