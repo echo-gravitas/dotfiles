@@ -1,7 +1,7 @@
 @import "catppuccin-mocha.rasi"
 
 * {
-  primary: @lavender;
+  primary: @sapphire;
   secondary: @red;
   background: @crust;
   light-background: @mantle;
@@ -14,9 +14,9 @@
 configuration {
   show-icons: false;
   font: "MonoLisa 12";
-  display-drun: "  DRun";
+  display-drun: "  Apps";
   display-window: "  Window";
-  display-run: "  Run";
+  display-run: "  Shell";
   display-ssh: "  SSH";
   sidebar-mode: true;
 }
@@ -32,8 +32,8 @@ window {
 }
 
 inputbar {
-  spacing: 10;
-  padding: 0 0 10 0;
+  spacing: 20;
+  padding: 0 0 20 0;
   children: [prompt, entry];
 }
 
@@ -45,7 +45,8 @@ prompt {
 }
 
 entry {
-  padding: 10;
+  vertical-align: 0.5;
+  padding: 0;
   placeholder: "Start typing...";
   placeholder-color: @ghosttext;
   text-color: @primary;
@@ -55,6 +56,7 @@ listview {
   border: 0;
   background-color: @background;
   scrollbar: false;
+  padding: 0 0 20 0;
 }
 
 element {
@@ -82,7 +84,7 @@ element normal.active {
 
 element selected.normal {
   background-color: @light-background;
-  text-color: @secondary;
+  text-color: white;
   highlight: @highlight;
 }
 
@@ -98,11 +100,14 @@ element selected.urgent {
   high: @highlight;
 }
 
+mode-switcher {
+  padding: 0;
+}
+
 button {
   border-radius: @border-radius;
   padding: 10 5;
   text-color: @ghosttext;
-  // background-color: @background;
 }
 
 button selected {
