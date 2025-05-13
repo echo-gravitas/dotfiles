@@ -7,13 +7,39 @@ return {
       provider = 'snacks',
     },
     provider = 'openai',
+    mode = 'legacy',
     openai = {
       endpoint = 'https://api.openai.com/v1',
       model = 'gpt-4.1',
     },
     gemini = {
       endpoint = 'https://generativelanguage.googleapis.com/v1beta/models',
-      model = 'gemini-2.5-pro-preview-03-25',
+      -- model = 'gemini-2.5-pro-preview-03-25',
+      model = 'gemini-2.5-pro-preview-05-06',
+    },
+    windows = {
+      position = 'right',
+      wrap = true,
+      width = 30,
+      sidebar_header = {
+        enabled = true,
+        align = 'center',
+        rounded = true,
+      },
+      input = {
+        prefix = '> ',
+        height = 8,
+      },
+      edit = {
+        border = 'rounded',
+        start_insert = true,
+      },
+      ask = {
+        floating = false,
+        start_insert = true,
+        border = 'rounded',
+        focus_on_apply = 'ours',
+      },
     },
   },
   build = 'make',

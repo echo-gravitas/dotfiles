@@ -5,6 +5,7 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = false
 vim.opt.cursorlineopt = 'both'
+vim.opt.colorcolumn = '80'
 vim.opt.number = true
 vim.opt.relativenumber = false
 vim.opt.laststatus = 3
