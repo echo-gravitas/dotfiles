@@ -5,16 +5,6 @@ return {
     opts = {},
   },
   {
-    'echasnovski/mini.pairs',
-    version = '*',
-    opts = {},
-  },
-  {
-    'echasnovski/mini.surround',
-    version = '*',
-    opts = {},
-  },
-  {
     'echasnovski/mini.cursorword',
     version = '*',
     opts = {},
