@@ -1,14 +1,15 @@
 [manager]
-ratio           = [2, 2, 4]
-show_hidden     = true
-show_symlink    = true
-title_format    = "{cwd}"
-sort_by         = "alphabetical"
-linemode        = "size"
+ratio = [2, 2, 4]
+show_hidden = true
+show_symlink = true
+title_format = "{cwd}"
+sort_by = "alphabetical"
+linemode = "size"
 
 [preview]
-wrap            = "no"
-tab_size        = 2
+wrap = "yes"
+image_quality = 90
+tab_size = 2
 
 [input]
-cursor_blink    = true
+cursor_blink = true
