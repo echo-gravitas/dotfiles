@@ -2,20 +2,22 @@ return {
   'yetone/avante.nvim',
   event = 'VeryLazy',
   version = false,
+  build = 'make',
   opts = {
     selector = {
       provider = 'snacks',
     },
     provider = 'openai',
-    mode = 'legacy',
+    mode = 'agentic', -- agentic | legacy
     openai = {
       endpoint = 'https://api.openai.com/v1',
       model = 'gpt-4.1',
+      temperature = 0,
     },
     gemini = {
       endpoint = 'https://generativelanguage.googleapis.com/v1beta/models',
-      -- model = 'gemini-2.5-pro-preview-03-25',
       model = 'gemini-2.5-pro-preview-05-06',
+      temperature = 0,
     },
     windows = {
       position = 'right',
@@ -42,7 +44,6 @@ return {
       },
     },
   },
-  build = 'make',
   dependencies = {
     'nvim-treesitter/nvim-treesitter',
     'stevearc/dressing.nvim',

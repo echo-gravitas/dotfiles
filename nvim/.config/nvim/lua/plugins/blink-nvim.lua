@@ -27,6 +27,7 @@ return {
           'lazy',
           'mason',
           'checkhealth',
+          'help',
         },
       },
       static = {
