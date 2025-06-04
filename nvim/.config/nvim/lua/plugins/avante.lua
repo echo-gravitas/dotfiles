@@ -9,15 +9,23 @@ return {
     },
     provider = 'openai',
     mode = 'agentic', -- agentic | legacy
-    openai = {
-      endpoint = 'https://api.openai.com/v1',
-      model = 'gpt-4.1',
-      temperature = 0,
-    },
-    gemini = {
-      endpoint = 'https://generativelanguage.googleapis.com/v1beta/models',
-      model = 'gemini-2.5-pro-preview-05-06',
-      temperature = 0,
+    providers = {
+      openai = {
+        endpoint = 'https://api.openai.com/v1',
+        model = 'gpt-4.1',
+        extra_request_body = {
+          temperature = 0,
+          timeout = 30000,
+        },
+      },
+      gemini = {
+        endpoint = 'https://generativelanguage.googleapis.com/v1beta/models',
+        model = 'gemini-2.5-pro-preview-05-06',
+        extra_request_body = {
+          temperature = 0,
+          timeout = 30000,
+        },
+      },
     },
     windows = {
       position = 'right',
