@@ -1,3 +1,4 @@
+vim.g.pairs = false
 vim.opt.scrolloff = 3
 vim.opt.whichwrap:append ('<>[]hl')
 vim.opt.termguicolors = true

@@ -1,12 +1,11 @@
 return {
   'saghen/blink.pairs',
-  version = '*', -- (recommended) only required with prebuilt binaries
-  build = 'cargo build --release',
+  version = '*',
+  dependencies = 'saghen/blink.download',
   opts = {
     mappings = {
-      -- you can call require("blink.pairs.mappings").enable() and require("blink.pairs.mappings").disable() to enable/disable mappings at runtime
       enabled = true,
-      -- see the defaults: https://github.com/Saghen/blink.pairs/blob/main/lua/blink/pairs/config/mappings.lua#L10
+      disabled_filetypes = {},
       pairs = {},
     },
     highlights = {

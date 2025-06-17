@@ -16,52 +16,13 @@ return {
     chartoggle = {
       enabled = true,
     },
-    indent = {
-      enabled = true,
-      visible = true,
-      blocked = {
-        buftypes = {},
-        filetypes = {
-          'snacks_picker_list',
-          'snacks_dashboard',
-          'lazy',
-          'mason',
-          'checkhealth',
-          'help',
-        },
-      },
-      static = {
-        enabled = true,
-        char = '│',
-        priority = 1,
-        highlights = { 'BlinkIndent' },
-      },
-      scope = {
-        enabled = true,
-        char = '│',
-        priority = 1024,
-        highlights = {
-          'BlinkIndentRed',
-          'BlinkIndentYellow',
-          'BlinkIndentBlue',
-          'BlinkIndentOrange',
-          'BlinkIndentGreen',
-          'BlinkIndentViolet',
-          'BlinkIndentCyan',
-        },
-        underline = {
-          enabled = false,
-          highlights = {
-            'BlinkIndentRedUnderline',
-            'BlinkIndentYellowUnderline',
-            'BlinkIndentBlueUnderline',
-            'BlinkIndentOrangeUnderline',
-            'BlinkIndentGreenUnderline',
-            'BlinkIndentVioletUnderline',
-            'BlinkIndentCyanUnderline',
-          },
-        },
-      },
+    filetypes = {
+      'snacks_picker_list',
+      'snacks_dashboard',
+      'lazy',
+      'mason',
+      'checkhealth',
+      'help',
     },
     select = {
       enabled = false,

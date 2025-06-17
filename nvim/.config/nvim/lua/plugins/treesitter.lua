@@ -4,13 +4,9 @@ return {
   branch = 'main',
   build = ':TSUpdate',
   opts = {
-    auto_install = true,
-    highlight = {
-      enabled = true,
+    install = {
+      'rust',
+      'javascript',
     },
-    indent = {
-      enabled = true,
-    },
-    ensure_installed = 'all',
   },
 }
