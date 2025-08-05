@@ -82,5 +82,8 @@
   "theme.bar.buttons.innerRadiusMultiplier": "0.5",
   "theme.bar.layer": "top",
   "menus.transition": "crossfade",
-  "scalingPriority": "hyprland"
+  "scalingPriority": "hyprland",
+  "bar.customModules.storage.paths": [
+    "/"
+  ]
 }

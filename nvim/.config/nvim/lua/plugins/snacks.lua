@@ -13,7 +13,7 @@ return {
         {
           pane = 1,
           section = 'terminal',
-          cmd = 'chafa ~/.config/avatar/hacker.webp --format symbols --symbols alpha; sleep 1;',
+          cmd = 'chafa ~/.config/avatar/hacker.webp --format symbols --symbols alpha;',
           hl = 'header',
           height = 21,
         },
