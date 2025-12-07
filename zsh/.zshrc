@@ -1,8 +1,6 @@
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
-[ -f "$HOME/.zsh_secrets" ] && source "$HOME/.zsh_secrets"
-
 plug "zap-zsh/supercharge"
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
@@ -16,9 +14,8 @@ plug "chivalryq/git-alias"
 plug "MichaelAquilina/zsh-you-should-use"
 
 # ENV Variables
-export EDITOR="/usr/bin/nvim"
+export EDITOR="/snap/bin/code"
 export VISUAL="nvim"
-export CREDENTIALS_DIRECTORY="/etc/systemd/credentials"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export SDL_VIDEO_X11_DGAMOUSE=0
@@ -32,7 +29,6 @@ alias l="eza -1lga --icons=auto --git"
 alias ff="c;hyfetch"
 alias n="nvim"
 alias v="nvim"
-alias nano="nvim"
 alias vi="nvim"
 alias vim="nvim"
 alias t="tree -a"
@@ -45,7 +41,11 @@ alias sjrnl="sudo journalctl"
 alias mail="aerc"
 alias clearavante="rm -rf ~/.local/share/nvim/avante/ ~/.local/state/nvim/avante/"
 alias lg="lazygit"
+alias cat="batcat"
+alias bat="batcat"
 
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
+
+eval "$(starship init zsh)"
