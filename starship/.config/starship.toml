@@ -149,5 +149,6 @@ format = '[ 󰥔 $time ]($style)'
 # This is the default symbols table.
 [os.symbols]
 Arch = "󰣇 "
+CachyOS = "󰣇 "
 Debian = " "
 Ubuntu = "󰕈 "
