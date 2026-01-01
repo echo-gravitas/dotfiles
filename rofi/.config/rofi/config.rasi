@@ -14,6 +14,7 @@
 configuration {
   show-icons: false;
   font: "MonoLisa 12";
+  display-combi: "  Combi";
   display-drun: "  Apps";
   display-window: "  Window";
   display-run: "  Shell";

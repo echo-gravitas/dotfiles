@@ -13,7 +13,7 @@ return {
         {
           pane = 1,
           section = 'terminal',
-          cmd = 'chafa ~/.config/avatar/hacker.webp --format symbols --symbols alpha; sleep 1;',
+          cmd = 'chafa ~/.config/avatar/hacker.webp --format symbols --symbols alpha;',
           hl = 'header',
           height = 21,
         },
@@ -88,7 +88,7 @@ return {
     git = { enabled = true },
     gitbrowse = { enabled = true },
     image = { enabled = true },
-    indent = { enabled = true },
+    indent = { enabled = false },
     input = { enabled = true },
     layout = { enabled = true },
     lazygit = { enabled = true },
